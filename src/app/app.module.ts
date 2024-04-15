@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SearchMenuComponent } from './search-menu/search-menu.component';
 import { PkgCarouselComponent } from './pkg-carousel/pkg-carousel.component';
 import { PkgCardComponent } from './pkg-card/pkg-card.component';
+import { CypComponent } from './cyp/cyp.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PkgCardComponent } from './pkg-card/pkg-card.component';
     NavbarComponent,
     SearchMenuComponent,
     PkgCarouselComponent,
-    PkgCardComponent
+    PkgCardComponent,
+    CypComponent
   ],
   imports: [
     BrowserModule,
