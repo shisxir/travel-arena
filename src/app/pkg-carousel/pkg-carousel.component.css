@@ -1,7 +1,11 @@
-.pkg-carousel{
+.container{
     display:flex;
+    /* height: 100vh;
+    width: 100%; */
+    height: auto;
     align-items: end;
     position: relative;
+    padding-bottom: 100px;
 }
 
 .left{
