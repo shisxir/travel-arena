@@ -1,50 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
-  // constructor() { }
+export class NavbarComponent implements OnInit {
 
-  // ngOnInit(): void {
-  //   const navbarMenu = document.getElementById("menu");
-  //   const burgerMenu = document.getElementById("burger");
-  //   const bgOverlay = document.querySelector(".overlay");
+  isNavbarCollapsed = true;
 
-  //   if (burgerMenu && bgOverlay) {
-  //     burgerMenu.addEventListener("click", () => {
-  //       navbarMenu?.classList.add("is-active");
-  //       bgOverlay.classList.toggle("is-active");
-  //     });
+  constructor() { }
 
-  //     bgOverlay.addEventListener("click", () => {
-  //       navbarMenu?.classList.remove("is-active");
-  //       bgOverlay.classList.toggle("is-active");
-  //     });
-  //   }
+  ngOnInit(): void {
+  }
 
-  //   document.querySelectorAll(".menu-link").forEach((link) => {
-  //     link.addEventListener("click", () => {
-  //       navbarMenu?.classList.remove("is-active");
-  //       bgOverlay?.classList.remove("is-active");
-  //     });
-  //   });
-
-  //   const searchBlock = document.querySelector(".search-block");
-  //   const searchToggle = document.querySelector(".search-toggle");
-  //   const searchCancel = document.querySelector(".search-cancel");
-
-  //   if (searchToggle && searchCancel) {
-  //     searchToggle.addEventListener("click", () => {
-  //       searchBlock?.classList.add("is-active");
-  //     });
-
-  //     searchCancel.addEventListener("click", () => {
-  //       searchBlock?.classList.remove("is-active");
-  //     });
-  //   }
-  // }
+  toggleNavbar() {
+    this.isNavbarCollapsed = !this.isNavbarCollapsed;
+  }
+  closeNavbar() {
+    this.isNavbarCollapsed = true;
+  }
 }
-
