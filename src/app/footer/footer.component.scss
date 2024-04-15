@@ -1,35 +1,280 @@
-#footer{
-    width: 100%;
-    margin-top: 150px;
-    text-align: center;
-    background: #f9f9f9;
-}
-
-#footer h1{
-    font-weight: 600;
-    padding-top: 30px;
-    text-shadow: 0px 0px 1px black;
-}
-
-#footer h1 span{
-    color: #ffa500;
-}
-
-.social-links i{
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 10px;
-    background: black;
-    color: white;
-    margin-left: 10px;
+.footer {
+    background-color: #f0f0f0; /* Light background color */
+    padding: 20px 0; /* Adjust padding as needed */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .our-offerings {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-left: 5px solid #333;
+    font-weight: bold;
     margin-bottom: 10px;
-    transition: 0.5s ease;
-    cursor: pointer;
-}
-// .credit{
-//     margin-top: 10px 0;
-// }
-
-.social-links i:hover{
-    background: #ffa500;
-}
+    position: relative;
+  }
+  
+  .arrow {
+    position: absolute;
+    left: 10px;
+  }
+  
+  .footer-content {
+    display: flex;
+  }
+  
+  .footer-item {
+    flex: 1;
+    padding: 0 20px;
+  }
+  
+  .footer-heading {
+    font-weight: bold;
+  }
+  
+  .links-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .links-list li {
+    margin-bottom: 10px;
+  }
+  
+  .links-list li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .links-list li a:hover {
+    text-decoration: underline;
+  }
+  
+  hr {
+      border: none; /* Remove default border */
+      height: 1px; /* Set the height of the line */
+      background-color: #8f8d8b; /* Set the color of the line */
+      margin: 20px auto; /* Adjust margin to leave space on top and bottom, and center horizontally */
+      max-width: 80%;
+  }
+  
+  
+  .black-background {
+      background-color: #000;
+      color: #fff;
+      padding: 20px 0;
+      height:250px;
+    }
+    
+    .additional-div {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .left-div,
+    .right-div {
+      flex: 1;
+    }
+    
+    /* .left-div {
+      height:130px;
+      position: relative;
+      padding-left:15px;
+      width:675px;
+    } */
+    .left-div {
+      flex: 65%; /* Adjust the width of the left div */
+      height: 130px;
+      position: relative;
+      padding-left: 45px;
+  }
+  
+  .right-div {
+      flex: 35%; /* Adjust the width of the right div */
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .download{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-left: 20px;
+  }
+  .logoqr{
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .downtext,
+  .scantext {
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+  
+  .downtext {
+      font-weight: bold;
+      margin-bottom: 10px;
+      position: relative;
+      padding-right: 50px; /* Increase or decrease as needed */
+  }
+  
+  .blueline {
+      display: block;
+      width: 40px;
+      height: 2px;
+      background-color: rgb(0, 115, 255); /* Adjust the color as needed */
+      position: relative;
+      top: 10px; /* Adjust as needed */
+     
+      margin-right: auto;
+  }
+  
+  
+  
+  .apps,
+  .qrlogo {
+      display: flex;
+  
+  }
+  
+  .apiconh1 {
+      margin-right: 10px;
+      position: relative;
+      padding-right:10px;
+      padding-top:20px;
+  }
+  .apiconh2 {
+      margin-right: 10px;
+      position: relative;
+      padding-right: 50px;
+      padding-top:20px;
+  }
+  .qdrt{
+      margin-right: 10px;
+      position: relative;
+      padding-right:100px;
+      padding-top:20px;
+  }
+  
+  .links-list li a:link {
+      text-decoration: none;
+      color:  rgb(0, 81, 255); /* Default color for unvisited links */
+  }
+  
+  .links-list li a:visited {
+      text-decoration: none;
+      color: black; /* Color for visited links */
+  }
+  
+  .links-list li a:hover {
+      text-decoration: underline;
+      color: rgb(0, 21, 255); /* Color when hovering over links */
+  }
+  
+  .links-list li a:active {
+      color: #ff0000; /* Color when link is clicked */
+  }
+  
+  .copyright-text {
+      text-align: center; /* Center the text horizontally */
+      margin-top: 20px; /* Add some space between the hr and the text */
+      color: #ab9f9f; /* Adjust text color as needed */
+    }
+    
+    .copyright-text p {
+      margin: 10px 0; /* Add some space between paragraphs */
+    }
+    
+    .contact-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .contact-list li {
+      margin-bottom: 10px;
+    }
+    
+   
+  /* Your existing CSS styles */
+  
+  /* Responsive adjustments for the entire footer */
+  /* Your existing CSS styles */
+  
+  /* Responsive adjustments for the black background and its content */
+  @media screen and (max-width: 1000px) {
+      .black-background {
+        padding: 20px 10px; /* Adjust padding on smaller screens */
+        height: auto; /* Allow height to adjust dynamically */
+      }
+    
+      .additional-div {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+      }
+    
+      .left-div, .right-div {
+        width: 100%; /* Set width to full on smaller screens */
+        margin-bottom: 20px; /* Add margin between sections */
+      }
+    
+      .download, .logoqr {
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text horizontally */
+      }
+    }
+    
+    @media screen and (min-width: 768px) {
+      .left-div, .right-div {
+        padding: 0 10px; /* Adjust padding on screens wider than 768px */
+      }
+    }
+    
+    @media screen and (max-width: 768px) {
+      .footer-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+      }
+    
+      .footer-item {
+        flex-basis: auto; /* Reset flex basis to allow items to take content width */
+        max-width: 100%; /* Maximum width of each item on smaller screens */
+      }
+    
+      .download, .logoqr, .qrlogo {
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text horizontally */
+        flex-direction: column; /* Stack items vertically */
+      }
+    
+      .apps, .qrlogo {
+        display: flex; /* Ensure logos are displayed as flex items */
+        flex-direction: column; /* Stack logos vertically */
+        align-items: center; /* Center logos horizontally */
+      }
+    
+      .qdrt {
+        margin-right: 10px;
+        position: relative;
+        padding-right: 100px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column; /* Stack QR code vertically */
+        align-items: center; /* Center QR code horizontally */
+      }
+    
+      .qdrt img {
+        width: auto; /* Ensure QR code maintains its aspect ratio */
+        height: 100px; /* Set a fixed height for the QR code */
+      }
+    
+      .scan-text {
+        margin-bottom: 10px; /* Add margin between the text and QR code */
+      }
+    
+      .qrlogo {
+        margin-top: 10px; /* Add margin between the QR code and its text */
+      }
+    }
+    
