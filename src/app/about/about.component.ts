@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-
+  expanded: boolean=false;
+  toggleText(): void{
+    this.expanded = !this.expanded;
+  }
 }
