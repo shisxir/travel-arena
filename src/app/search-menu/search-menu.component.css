@@ -61,6 +61,7 @@
 } */
 
 .search-section{
+  position: relative;
   margin-right: -100px;
   margin-top: 50px;
   height: 80vh;
