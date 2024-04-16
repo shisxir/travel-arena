@@ -12,6 +12,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { BookingComponent } from './booking/booking.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { BookingComponent } from './booking/booking.component';
     AboutComponent,
     FooterComponent,
     BookingComponent,
+    LoginComponent,
    
   ],
   imports: [

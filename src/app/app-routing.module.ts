@@ -10,6 +10,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { BookingComponent } from './booking/booking.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'homepage', component: HomepageComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'src\app\about', component: AboutComponent},
   { path: 'src\app\footer', component: FooterComponent},
   { path: 'booking', component:BookingComponent},
+  { path: 'login', component: LoginComponent },
   {path:'',component:HomepageComponent}
 
 ];
