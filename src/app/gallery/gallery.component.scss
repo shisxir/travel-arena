@@ -49,7 +49,7 @@
   }
   
   .text {
-    color: rgba(50, 50, 50, 0.9); /* Light black/ash color */
+    color: white; /* Light black/ash color */
     font-size: 20px;
   }
   
@@ -83,5 +83,34 @@
   
   .main-txt span {
     color: #ffa500;
+  }
+  
+  
+
+
+ 
+
+
+
+  @keyframes planeLeftToRight {
+    0% {
+      left: -150px; /* Initial position off the left side of the screen */
+    }
+    100% {
+      left: calc(100vw + 150px); /* Final position off the right side of the screen */
+    }
+  }
+  
+  .plane-container {
+    position: fixed;
+    top: 50%; /* Adjust the position as needed */
+    left: -150px; /* Start from the left side of the screen */
+    animation: planeLeftToRight 10s linear infinite; /* Animation for plane movement */
+    z-index: 9999; /* Ensure it's above other elements */
+  }
+  
+  .plane-icon {
+    font-size: 28px; /* Increased size */
+    color: #ffa500; /* Adjust color as needed */
   }
   

@@ -3,7 +3,7 @@
     max-width: 800px; /* Adjust as needed */
     margin: 60px auto 0 auto; /* Top margin to account for the navbar */
     padding: 20px;
-    background-color: #FFE5B4; /* Light orange background color */
+    background-color: #8acbd6; /* Light orange background color */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   }
@@ -70,3 +70,15 @@
   .bestpack p {
     margin-bottom: 8px; /* Add some space below each paragraph */
   }
+
+
+
+  .custom-button {
+    background-color: #005665; /* Set the background color to #ffa500 */
+    border-color: #005665; /* Set the border color to #ffa500 */
+}
+
+.custom-button:hover {
+    background-color: #005665; /* Change the background color on hover */
+    border-color: #005665; /* Change the border color on hover */
+}

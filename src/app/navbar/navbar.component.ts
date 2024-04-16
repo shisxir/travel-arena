@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  activeLink: string = '';
 
   isNavbarCollapsed = true;
 
@@ -20,4 +21,17 @@ export class NavbarComponent implements OnInit {
   closeNavbar() {
     this.isNavbarCollapsed = true;
   }
+  isPackagesPage(): boolean {
+    return this.router.url === '/packages';
+}
+isBookPage(): boolean {
+  return this.router.url === '/book';
+}
+
+isHomePage(): boolean {
+  return this.router.url === '/home';
+}
+isAboutPage(): boolean {
+  return this.router.url === '/about';
+}
 }

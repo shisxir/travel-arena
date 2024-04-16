@@ -2,10 +2,10 @@
 <div class="container">
     <h2>Booking Details</h2>
   
-    <!-- Image Slider -->
+    <!-- Image Slider
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
         <div class="carousel-inner">
-          <!-- Carousel items -->
+          Carousel items
           <div class="carousel-item active">
             <img src="assets/images/london1.webp" class="d-block w-100" alt="Image 1">
           </div>
@@ -16,20 +16,63 @@
             <img src="assets/images/london3.jpeg" class="d-block w-100" alt="Image 3">
           </div>
         </div>
-        <!-- Previous button -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        Previous button -->
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span class="visually-hidden">Previous</span>
           </button>
           
-          <!-- Next button -->
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          Next button -->
+          <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
             <span class="visually-hidden">Next</span>
           </button>
-      </div>
+      </div> -->
+
+      <!-- Image Slider -->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+    <div class="carousel-inner">
+        <!-- Carousel items -->
+        <div class="carousel-item active" *ngIf="selectedPackage === 'Ladakh'">
+            <img src="assets/images/Ladakh3.jpg" class="d-block w-100" alt="Image 1">
+        </div>
+        <div class="carousel-item" *ngIf="selectedPackage === 'Ladakh'">
+            <img src="assets/images/Ladakh4.jpg" class="d-block w-100" alt="Image 2">
+        </div>
+        <div class="carousel-item" *ngIf="selectedPackage === 'Ladakh' ">
+            <img src="assets/images/Ladakh5.jpg" class="d-block w-100" alt="Image 3">
+        </div>
+        <div class="carousel-item active" *ngIf="selectedPackage === 'Lakshadweep'">
+            <img src="assets/images/Lakshadweep3.jpg" class="d-block w-100" alt="Image 1">
+        </div>
+        <div class="carousel-item" *ngIf="selectedPackage === 'Lakshadweep'">
+            <img src="assets/images/Lakshadweep4.jpg" class="d-block w-100" alt="Image 2">
+        </div>
+        <div class="carousel-item" *ngIf="selectedPackage === 'Lakshadweep'">
+            <img src="assets/images/Lakshadweep5.jpg" class="d-block w-100" alt="Image 3">
+        </div>
+        <div class="carousel-item active" *ngIf="selectedPackage === 'Amritsar'">
+            <img src="assets/images/Amritsar3.jpg" class="d-block w-100" alt="Image 1">
+        </div>
+        <div class="carousel-item" *ngIf="selectedPackage === 'Amritsar'">
+            <img src="assets/images/Amritsar4.jpg" class="d-block w-100" alt="Image 2">
+        </div>
+        <div class="carousel-item" *ngIf="selectedPackage === 'Amritsar'">
+            <img src="assets/images/Amritsar5.jpg" class="d-block w-100" alt="Image 3">
+        </div>
+    </div>
+    <!-- Previous button -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <!-- Next button -->
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
       
   
     <!-- Information about the place -->
-    <div class="mt-4">
+    <!-- <div class="mt-4">
       <h3>London</h3>
       <p>
         London is a cultural melting pot, blending rich history with modern vibrancy. Its iconic landmarks, diverse neighborhoods, and world-class museums make it a must-visit destination. From the historic Tower of London to the bustling streets of Camden Market, there's something for everyone. Explore the city's green spaces like Hyde Park or indulge in the vibrant culinary scene. With its eclectic mix of cultures and attractions, London offers an unforgettable experience for travelers.</p>
@@ -41,11 +84,94 @@
         <p>Travel just at 350</p>
     </div>
     
-    <!-- Book Now Button -->
-    <div class="text-center">
+    Book Now Button -->
+    <!-- <div class="text-center">
         <a routerLink="/book" class="btn btn-primary mt-3">Lets Go<i class="bi bi-arrow-right"></i></a>
     </div>
+  </div> -->
+
+
+<!-- 
+  <div class="main-container">
+    <div class="content">
+      <div *ngIf="selectedPackage">
+        <div class="mt-4">
+          <h3>{{ selectedPackage }}</h3>
+          Add package details here
+          
+        </div>
+        <div class="bestpack">
+          <h6>Best Package by Travel Arena</h6>
+          <p>Number of days: 5</p>
+          <p>Number of people: 2</p>
+          <p>Travel just at $800</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+  <div class="main-container">
+    <div class="content">
+      <div *ngIf="selectedPackage; else defaultContent">
+        <div class="mt-4">
+          <h3>{{ selectedPackage }}</h3>
+          <!-- Add package details here -->
+          <ng-container *ngIf="selectedPackage === 'Ladakh'">
+            
+            <p>
+              London is a cultural melting pot, blending rich history with modern vibrancy. Its iconic landmarks, diverse neighborhoods, and world-class museums make it a must-visit destination. From the historic Tower of London to the bustling streets of Camden Market, there's something for everyone. Explore the city's green spaces like Hyde Park or indulge in the vibrant culinary scene. With its eclectic mix of cultures and attractions, London offers an unforgettable experience for travelers.
+            </p>
+          </ng-container>
+          <ng-container *ngIf="selectedPackage === 'Lakshadweep'">
+            
+            <p>
+              France is known for its romantic ambiance, stunning architecture, and exquisite cuisine. Explore the charming streets of Paris, home to iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum. Experience the picturesque countryside of Provence, famous for its lavender fields and vineyards. Whether you're strolling along the Seine River or savoring a croissant in a quaint café, France captivates with its beauty and elegance.
+            </p>
+          </ng-container>
+          <ng-container *ngIf="selectedPackage === 'Amritsar'">
+            
+            <p>
+              Amritsar is known for its romantic ambiance, stunning architecture, and exquisite cuisine. Explore the charming streets of Paris, home to iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum. Experience the picturesque countryside of Provence, famous for its lavender fields and vineyards. Whether you're strolling along the Seine River or savoring a croissant in a quaint café, France captivates with its beauty and elegance.
+            </p>
+          </ng-container>
+        </div>
+        <div class="bestpack">
+          <h6>Best Package by Travel Arena</h6>
+          <ng-container *ngIf="selectedPackage === 'Ladakh'">
+            <p>Number of days: 3</p>
+            <p>Number of people: 4</p>
+            <p>Travel just at $350</p>
+          </ng-container>
+          <ng-container *ngIf="selectedPackage === 'Lakshadweep'">
+            <p>Number of days: 5</p>
+            <p>Number of people: 2</p>
+            <p>Travel just at $800</p>
+            
+          </ng-container>
+          <ng-container *ngIf="selectedPackage === 'Amritsar'">
+            <p>Number of days: 3</p>
+            <p>Number of people: 5</p>
+            <p>Travel just at $300</p>
+            
+          </ng-container>
+        </div>
+        <div class="text-center">
+            <a routerLink="/book" class="btn btn-primary mt-3 custom-button">Lets Go<i class="bi bi-arrow-right"></i></a>
+        </div>
+        
+      </div>
+      <ng-template #defaultContent>
+        <!-- Default content if no package is selected -->
+        <h3>No package selected</h3>
+      </ng-template>
+      
+    </div>
   </div>
+  
+
+  
+  
 
 
   

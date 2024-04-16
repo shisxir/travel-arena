@@ -43,3 +43,12 @@
     color: white;
     border: none;
 }
+
+.active {
+    color: #ffa500; /* Change the color to orange for active links */
+    text-decoration: underline; /* Add underline for active links */
+  }
+  
+  .navbar-brand.active span {
+    border: 2px solid transparent; /* Remove border */
+  }

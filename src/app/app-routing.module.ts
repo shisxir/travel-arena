@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'packages', component: PackagesComponent},
   // { path: 'services', component: ServicesComponent},
   { path: 'src\app\gallery', component: GalleryComponent},
-  { path: 'src\app\about', component: AboutComponent},
+  { path: 'about', component: AboutComponent},
   { path: 'src\app\footer', component: FooterComponent},
   { path: 'booking', component:BookingComponent},
   { path: 'login', component: LoginComponent },
