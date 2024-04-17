@@ -1,110 +1,117 @@
-<!-- <app-navbar></app-navbar> -->
 <section class="book" id="book">
-    <div class="container">
+  <div class="container">
 
-      <div class="main-text">
-        <h1>Book your dream Destination</h1>
-      </div>
-      
-      <div class="row">
-
-        <div class="col-md-4 py-3 py-md-0">
-          <div class="card">
-            <img src="assets/images/book-img.png" alt="">
-          </div>
-        </div>
-
-        <!-- <div class="col-md-6 py-3 py-md-0">
-          <form action="#">
-            <input type="text" class="form-control" placeholder="Enter your full name" required><br>
-            <input type="text" class="form-control" placeholder="Enter your email address" required><br>
-            <input type="text" class="form-control" placeholder="Choose your destination" required><br>
-            <input type="text" class="form-control" placeholder="Enter the number of guests" required><br>
-            <input type="date" class="form-control" placeholder="Check-In Date" required><br>
-            <input type="date" class="form-control" placeholder="Check-Out Date" required><br>
-            <textarea class="form-control" rows="3" name="text" placeholder="Please mention any extra details or specific requests."></textarea>
-            <input type="submit" value="Book Now" class="submit" required>
-
-          </form>
-        </div> -->
-        <div class="col-md-7 py-3 py-md-0">
-          <form [formGroup]="form" (ngSubmit)="onSubmit()">
-            <div class="form-group row mb-2">
-              <div class="col">
-                <label>First Name :</label>
-                <input type="text" formControlName="firstname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['firstname'].errors }"/>
-                @if (submitted && f['firstname'].errors) {
-                  <div class="invalid-feedback">
-                    @if (f['firstname'].errors['required']) {
-                    <div>First Name is required</div>
-                    }
-                  </div>
-                  }
-              </div>
-              <div class="col">
-                <label>Last Name :</label>
-                <input type="text" formControlName="lastname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['lastname'].errors }">
-                @if (submitted && f['lastname'].errors) {
-                  <div class="invalid-feedback">
-                    @if (f['lastname'].errors['required']) {
-                    <div>Last Name is required</div>
-                    }
-                  </div>
-                }  
-              </div>
-            </div>
-            <div class="form-group row mb-4">
-              <label>Starting Date :</label>
-              <div class="col">
-                <input type="date" formControlName="date" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['date'].errors }"/>
-                @if (submitted && f['date'].errors) {
-                  <div class="invalid-feedback">
-                    @if (f['date'].errors['required']) {
-                    <div>Date is required</div>
-                    }
-                  </div>
-                  }
-              </div>
-              <div class="col">
-                <label>Duration :</label>
-                <input type="number" formControlName="noOfDays" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['noOfDays'].errors }" />
-                @if (submitted && f['noOfDays'].errors) {
-                  <div class="invalid-feedback">
-                    @if (f['noOfDays'].errors['required']) {
-                    <div>Duration is required</div>
-                    }
-                @if (f['noOfDays'].errors['maxlength']) {
-                    <div>Days must not exceed 7 at a time</div>
-                    }
-                  </div>
-                  }
-              </div>
-              <div class="col">
-                <label>Guest Count :</label>
-                <input type="number" formControlName="noOfGuests" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['noOfGuests'].errors }" />
-                @if (submitted && f['noOfGuests'].errors) {
-                  <div class="invalid-feedback">
-                    @if (f['noOfGuests'].errors['required']) {
-                    <div> Number of Guests is required</div>
-                    }
-                  </div>
-                  }
-              </div>
-            </div>
-            <div class="form-group mb-4">
-              <label>Additional Details :</label>
-              <textarea class="form-control" rows="1" formControlName="extra" [ngClass]="{ 'is-invalid': submitted && f['extra'].errors }"></textarea>
-              @if (submitted && f['extra'].errors) {
-                <div class="invalid-feedback">Pls type NA if not Applicable</div>
-                }
-            </div>
-            <div class="form-group mb-2">
-              <input type="submit" value="Book Now" class="btn btn-primary" required>
-            </div>
-          </form>
-        </div>
-        
-
-      </div>
+    <div class="main-text">
+      <h1>Book your dream Destination</h1>
     </div>
-  </section>
+
+    <div class="row">
+
+      <div class="col-md-5 py-3 py-md-1">
+        <div class="card">
+          <img src="assets/images/book-img.png" alt="">
+        </div>
+      </div>
+      <div class="col-md-7 py-3 py-md-0">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="form-group row mb-2">
+            <div class="col">
+              <label>Full Name :</label>
+              <input type="text" formControlName="fullname" class="form-control" placeholder="Enter your full name"
+                [ngClass]="{ 'is-invalid': submitted && f['fullname'].errors }" />
+              @if (submitted && f['fullname'].errors) {
+              <div class="invalid-feedback">
+                @if (f['fullname'].errors['required']) {
+                <div>First Name is required</div>
+                }@else {
+                <div>Only Text is allowed</div>
+                }
+              </div>
+              }
+            </div>
+            <div class="col">
+              <label>Email :</label>
+              <input type="text" formControlName="email" placeholder="Enter your email address" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['email'].errors }">
+              @if (submitted && f['email'].errors) {
+              <div class="invalid-feedback">
+                @if (f['email'].errors['required']) {
+                <div>Email is required</div>
+                }@else {
+                <div>Enter a valid email address</div>
+                }
+              </div>
+              }
+            </div>
+          </div>
+          <div class="form-group row mb-4">
+            <div class="col">
+              <label>Starting Date :</label>
+              <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Select a Date"
+                formControlName="date" [min]="currentDate" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['date'].errors }" />
+              <!-- <input class="input-field date" type="date" placeholder="Select a Date" formControlName="date" [min]="currentDate" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['date'].errors }"/> -->
+              @if (submitted && f['date'].errors) {
+              <div class="invalid-feedback">
+                @if (f['date'].errors['required']) {
+                <div>Date is required</div>
+                }@else {
+                <div>Date can't be less than today's date</div>
+                }
+              </div>
+              }
+            </div>
+            <div class="col">
+              <label>Duration :</label>
+              <!-- <input type="text" list="duration" formControlName="noOfDays" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['noOfDays'].errors }" /> -->
+              <select class="form-control" formControlName="noOfDays"
+                [ngClass]="{ 'is-invalid': submitted && f['noOfDays'].errors }">
+                <option value="" disabled selected>Select Duration</option>
+                <option value="2D/1N">2D/1N</option>
+                <option value="3D/2N">3D/2N</option>
+                <option value="4D/3N">4D/3N</option>
+                <option value="5D/4N">5D/4N</option>
+              </select>
+              @if (submitted && f['noOfDays'].errors) {
+              <div class="invalid-feedback">
+                @if (f['noOfDays'].errors['required']) {
+                <div>Duration is required</div>
+                }
+                @if (f['noOfDays'].errors['maxlength']) {
+                <div>Days must not exceed 7 at a time</div>
+                }
+              </div>
+              }
+            </div>
+            <div class="col">
+              <label>Guest Count :</label>
+              <input type="number" formControlName="noOfGuests" class="form-control" min="1"
+                [ngClass]="{ 'is-invalid': submitted && f['noOfGuests'].errors }" />
+              @if (submitted && f['noOfGuests'].errors) {
+              <div class="invalid-feedback">
+                @if (f['noOfGuests'].errors['required']) {
+                <div> Number of Guests is required</div>
+                }
+              </div>
+              }
+            </div>
+          </div>
+          <div class="form-group mb-4">
+            <label>Additional Details :</label>
+            <textarea class="form-control" rows="1" formControlName="extra"
+              [ngClass]="{ 'is-invalid': submitted && f['extra'].errors }"></textarea>
+            @if (submitted && f['extra'].errors) {
+            <div class="invalid-feedback">Pls type NA if not Applicable</div>
+            }
+          </div>
+          <div class="form-group mb-2">
+            <input type="submit" value="Book Now" class="btn btn-primary" required>
+          </div>
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+</section>
