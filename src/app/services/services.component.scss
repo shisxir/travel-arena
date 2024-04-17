@@ -69,20 +69,20 @@
     color: #ffa500; /* Orange color */
   }
   
-  /* Add pseudo-elements for circles or curves */
-  .services::before,
-  .services::after {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #ffa500;
-    opacity: 0.5;
-    animation: move 10s infinite linear alternate;
-  }
+  // /* Add pseudo-elements for circles or curves */
+  // .services::before,
+  // .services::after {
+  //   content: '';
+  //   position: absolute;
+  //   top: -50px;
+  //   left: -50px;
+  //   width: 100px;
+  //   height: 100px;
+  //   border-radius: 50%;
+  //   background-color: #ffa500;
+  //   opacity: 0.5;
+  //   animation: move 10s infinite linear alternate;
+  // }
   
   .services::after {
     top: auto;
