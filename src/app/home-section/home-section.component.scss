@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@400;500;600&display=swap");
+
 .home{
     width: 100%;
     height: 90vh;
@@ -21,6 +23,7 @@
     font-size: 38px;
     font-weight: 500;
     text-shadow: 0px 1px 1px black;
+    font-family: 'Noto serif', serif;
 }
 
 .home .content h1{
@@ -29,6 +32,7 @@
     font-weight: 550;
     text-shadow: 0px 1px 1px black;
     margin-top: 5px;
+    font-family: 'Noto serif', serif;
 }
 
 .changecontent::after{
@@ -59,6 +63,7 @@
     text-shadow: 0px 1px 1px black;
     margin-bottom: 30px;
     margin-top: 5px;
+    font-family: 'Noto serif', serif;
 
 }
 
@@ -71,6 +76,7 @@
     border-radius: 10px;
     text-decoration: none;
     transition: 0.5s;
+    font-family: "Poppins", sans-serif;
 }
 
 .home .content a:hover{
