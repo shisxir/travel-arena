@@ -11,7 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 // import { BookingComponent } from './booking/booking.component';
 const routes: Routes = [
-  { path: 'homepage', component: HomepageComponent},
+  { path: '', component: HomepageComponent},
   { path: 'navbar', component: NavbarComponent},
   { path: 'src\app\home-section', component: HomeSectionComponent},
   { path: 'book', component: BookComponent},
