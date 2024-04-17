@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 import { BookingComponent } from './booking/booking.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
     FooterComponent,
     SearchComponent,
     BookingComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,

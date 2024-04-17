@@ -2,18 +2,20 @@ import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { LocalStorageService } from '../local-storage.service';
 
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
-  styleUrl: './book.component.scss'
+  styleUrl: './book.component.scss',
 })
 export class BookComponent implements OnInit {
   minDate = new Date();
+  currentDate: string;
 
   form: FormGroup = new FormGroup({
-    firstname: new FormControl(''),
-    lastname: new FormControl(''),
+    fullname: new FormControl(''),
+    email: new FormControl(''),
     date: new FormControl(''),
     noOfDays: new FormControl(''),
     noOfGuests: new FormControl(''),
@@ -21,14 +23,19 @@ export class BookComponent implements OnInit {
   });
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
-
+  constructor(private formBuilder: FormBuilder, private router: Router, private localStorageService: LocalStorageService) {
+    this.currentDate = this.getCurrentDate();
+  }
+    getCurrentDate() {
+    const today = new Date();
+    return today.toISOString().split('T')[0];
+  }
   ngOnInit(): void {
     this.form = this.formBuilder.group(
       {
-        firstname: ['', Validators.required],
-        lastname: [
-          '',Validators.required
+        fullname: ['', [Validators.required,Validators.pattern('[a-zA-Z ]*')]],
+        email: [
+          '',[Validators.required, Validators.email]
         ],
         date: ['', Validators.required],
         noOfDays: [
@@ -39,7 +46,7 @@ export class BookComponent implements OnInit {
           ]
         ],
         noOfGuests: ['', Validators.required],
-        extra: ['', Validators.required]
+        extra: ['']
       },
     );
   }
@@ -52,9 +59,13 @@ export class BookComponent implements OnInit {
     if (this.form.invalid) {
       return;
     }
-    console.log(JSON.stringify(this.form.value, null, 2));
+    const formData = this.form.value;
+    const userId = this.localStorageService.saveFormData(formData);
+    this.onReset();
+    // alert('Form data saved with user ID:'+userId);
+    this.router.navigate(['/payment']);
   }
-  onReset(): void {
+  onReset(): void { 
     this.submitted = false;
     this.form.reset();
   }
