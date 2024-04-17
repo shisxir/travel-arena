@@ -15,6 +15,7 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 import { BookingComponent } from './booking/booking.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BookingComponent } from './booking/booking.component';
     AboutComponent,
     FooterComponent,
     SearchComponent,
-    BookingComponent
+    BookingComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
