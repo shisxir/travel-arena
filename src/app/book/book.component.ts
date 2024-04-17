@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { SharedBookPayService } from '../shared-book-pay.service';
 
 @Component({
   selector: 'app-book',
@@ -21,7 +22,7 @@ export class BookComponent implements OnInit {
   });
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
+  constructor(private formBuilder: FormBuilder, private router: Router, private sharedBookPayService: SharedBookPayService) {}
 
   ngOnInit(): void {
     this.form = this.formBuilder.group(
@@ -53,6 +54,7 @@ export class BookComponent implements OnInit {
       return;
     }
     console.log(JSON.stringify(this.form.value, null, 2));
+    this.sharedBookPayService.buttonClicked();
   }
   onReset(): void {
     this.submitted = false;

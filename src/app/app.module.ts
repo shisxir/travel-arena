@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,8 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 import { BookingComponent } from './booking/booking.component';
+import { PaymentPageComponent } from './payment-page/payment-page.component';
+
 
 @NgModule({
   declarations: [
@@ -29,12 +31,14 @@ import { BookingComponent } from './booking/booking.component';
     AboutComponent,
     FooterComponent,
     SearchComponent,
-    BookingComponent
+    BookingComponent,
+    PaymentPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration()
