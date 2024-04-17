@@ -14,15 +14,27 @@
     justify-content: space-between;
 }
 
+// .packages .card {
+//     flex: 0 0 calc(33.33% - 20px);
+//     margin-right: 20px;
+//     box-sizing: border-box;
+//     border-radius: 5px;
+//     border: 1px solid black; /* Black border */
+//     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px; /* Increased shadow effect */
+//     height: 100%;
+//     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for smooth effect */
+// }
+
 .packages .card {
     flex: 0 0 calc(33.33% - 20px);
     margin-right: 20px;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 15px; /* Rounded rectangle border */
     border: 1px solid black; /* Black border */
     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px; /* Increased shadow effect */
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for smooth effect */
+    overflow: hidden;
 }
 
 .packages .card:hover {
