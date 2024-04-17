@@ -18,6 +18,14 @@
 //     position: relative;
 //     left: 5%;
 // }
+/* Adjust the position of the datepicker icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: relative;
+    right: 25px; /* Adjust this value as needed */
+    top: 10px; /* Adjust this value as needed */
+    transform: translateY(-50%);
+}
+
 
 .book{
     background: #f9f9f9;
