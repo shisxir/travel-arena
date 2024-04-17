@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Russo+One&display=swap');
+
 #navbar{
     // background: #e4dbe2;
     background: #005665;
@@ -41,9 +42,9 @@
 }
 
 .nav-item .nav-link:hover{
-    // background: #ffa500;
+    background: #ffa500;
     // color: white;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 #navbar form button{
