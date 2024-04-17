@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+// import {MatDatepickerModule} from '@angular/material/datepicker';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
-  styleUrl: './book.component.scss'
+  styleUrl: './book.component.scss',
 })
 export class BookComponent implements OnInit {
   minDate = new Date();
+  currentDate: string;
 
   form: FormGroup = new FormGroup({
-    firstname: new FormControl(''),
-    lastname: new FormControl(''),
+    fullname: new FormControl(''),
+    email: new FormControl(''),
     date: new FormControl(''),
     noOfDays: new FormControl(''),
     noOfGuests: new FormControl(''),
@@ -21,14 +23,19 @@ export class BookComponent implements OnInit {
   });
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
-
+  constructor(private formBuilder: FormBuilder, private router: Router) {
+    this.currentDate = this.getCurrentDate();
+  }
+    getCurrentDate() {
+    const today = new Date();
+    return today.toISOString().split('T')[0];
+  }
   ngOnInit(): void {
     this.form = this.formBuilder.group(
       {
-        firstname: ['', Validators.required],
-        lastname: [
-          '',Validators.required
+        fullname: ['', [Validators.required,Validators.pattern('[a-zA-Z ]*')]],
+        email: [
+          '',[Validators.required, Validators.email]
         ],
         date: ['', Validators.required],
         noOfDays: [
