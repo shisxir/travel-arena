@@ -51,3 +51,10 @@
     color: white;
     border: none;
 }
+
+.active{
+    text-decoration: underline;
+}
+.navbar-brand.active span{
+    border: 2px solid transparent;
+}

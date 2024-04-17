@@ -1,39 +1,4 @@
-<!-- <nav class="navbar navbar-expand-lg" id="navbar">
-    <div class="container">
-      <a class="navbar-brand" href="index.html" id="logo"><span>T</span>ravelArena</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-        <span><i class="bi bi-justify"></i></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mynavbar">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#book">Book</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#packages">Packages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#gallary">Gallary</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-         
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="text" placeholder="Search">
-          <button class="btn btn-primary" type="button">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav> -->
-  <nav class="navbar navbar-expand-lg" id="navbar">
+<nav class="navbar navbar-expand-lg" id="navbar">
     <div class="container">
       <a class="navbar-brand" href="index.html" id="logo">Voyager</a>
       <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
@@ -43,13 +8,13 @@
       <div class="collapse navbar-collapse" [ngClass]="{'show': !isNavbarCollapsed}" id="mynavbar">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link active" href="index.html" [class.active]="isHomePage()">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#book" (click)="closeNavbar()">Book</a>
+            <a class="nav-link" routerLink="/book" [class.active]="isBookPage()" (click)="closeNavbar()" >Book</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#packages" (click)="closeNavbar()">Packages</a>
+          <li class="nav-item" [class.active]="isPackagesPage()">
+            <a class="nav-link" routerLink="/packages" (click)="closeNavbar()">Packages</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#services" (click)="closeNavbar()">Services</a>
@@ -58,7 +23,7 @@
             <a class="nav-link" href="#gallery" (click)="closeNavbar()">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about" (click)="closeNavbar()">About</a>
+            <a class="nav-link" routerLink="/about" [class.active]="isAboutPage()" (click)="closeNavbar()">About</a>
           </li>
         </ul>
       </div>
