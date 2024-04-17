@@ -25,6 +25,8 @@ const routes: Routes = [
   { path: 'payment', component:PaymentPageComponent}
   // { path: 'login', component: LoginComponent }
   
+  // { path: 'login', component: LoginComponent },
+  // {path:'',component:HomepageComponent}
 
 ];
 
