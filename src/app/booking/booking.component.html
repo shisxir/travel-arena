@@ -1,0 +1,273 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css" rel="stylesheet">
+
+<app-navbar></app-navbar>
+
+<div class="container">
+    <h2>Booking Details</h2>
+  
+    <!-- Image Slider
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+          Carousel items
+          <div class="carousel-item active">
+            <img src="assets/images/london1.webp" class="d-block w-100" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/london2.jpeg" class="d-block w-100" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/london3.jpeg" class="d-block w-100" alt="Image 3">
+          </div>
+        </div>
+        Previous button -->
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="visually-hidden">Previous</span>
+          </button>
+          
+          Next button -->
+          <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="visually-hidden">Next</span>
+          </button>
+      </div> -->
+
+      <!-- Image Slider -->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="500">
+    <div class="carousel-inner">
+        <!-- Carousel items -->
+        <div class="carousel-item active" *ngIf="selectedPackage === 'Ladakh'">
+            <img src="assets/images/Ladakh3.jpg" class="d-block w-100" alt="Image 1">
+        </div>
+        <div class="carousel-item" *ngIf="selectedPackage === 'Ladakh'">
+            <img src="assets/images/Ladakh4.jpg" class="d-block w-100" alt="Image 2">
+        </div>
+        <div class="carousel-item" *ngIf="selectedPackage === 'Ladakh' ">
+            <img src="assets/images/Ladakh5.jpg" class="d-block w-100" alt="Image 3">
+        </div>
+        <div class="carousel-item active" *ngIf="selectedPackage === 'Lakshadweep'">
+            <img src="assets/images/Lakshadweep3.jpg" class="d-block w-100" alt="Image 1">
+        </div>
+        <div class="carousel-item" *ngIf="selectedPackage === 'Lakshadweep'">
+            <img src="assets/images/Lakshadweep4.jpg" class="d-block w-100" alt="Image 2">
+        </div>
+        <div class="carousel-item" *ngIf="selectedPackage === 'Lakshadweep'">
+            <img src="assets/images/Lakshadweep5.jpg" class="d-block w-100" alt="Image 3">
+        </div>
+        <div class="carousel-item active" *ngIf="selectedPackage === 'Amritsar'">
+            <img src="assets/images/Amritsar3.jpg" class="d-block w-100" alt="Image 1">
+        </div>
+        <div class="carousel-item" *ngIf="selectedPackage === 'Amritsar'">
+            <img src="assets/images/Amritsar4.jpg" class="d-block w-100" alt="Image 2">
+        </div>
+        <div class="carousel-item" *ngIf="selectedPackage === 'Amritsar'">
+            <img src="assets/images/Amritsar5.jpg" class="d-block w-100" alt="Image 3">
+        </div>
+    </div>
+    <!-- Previous button -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <!-- Next button -->
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+      
+  
+    <!-- Information about the place -->
+    <!-- <div class="mt-4">
+      <h3>London</h3>
+      <p>
+        London is a cultural melting pot, blending rich history with modern vibrancy. Its iconic landmarks, diverse neighborhoods, and world-class museums make it a must-visit destination. From the historic Tower of London to the bustling streets of Camden Market, there's something for everyone. Explore the city's green spaces like Hyde Park or indulge in the vibrant culinary scene. With its eclectic mix of cultures and attractions, London offers an unforgettable experience for travelers.</p>
+    </div>
+    <div class="bestpack">
+        <h6>Best Package by Travel Arena</h6>
+        <p>Number of days: 3</p>
+        <p>Number of people: 4</p>
+        <p>Travel just at 350</p>
+    </div>
+    
+    Book Now Button -->
+    <!-- <div class="text-center">
+        <a routerLink="/book" class="btn btn-primary mt-3">Lets Go<i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div> -->
+
+<!-- 
+  <div class="main-container">
+    <div class="content">
+      <div *ngIf="selectedPackage">
+        <div class="mt-4">
+          <h3>{{ selectedPackage }}</h3>
+          Add package details here
+          
+        </div>
+        <div class="bestpack">
+          <h6>Best Package by Travel Arena</h6>
+          <p>Number of days: 5</p>
+          <p>Number of people: 2</p>
+          <p>Travel just at $800</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="main-container">
+    <div class="content">
+      <!-- <div *ngIf="selectedPackage; else defaultContent">
+        <div class="mt-4">
+          <h3>{{ selectedPackage }}</h3> -->
+          <!-- Add package details here -->
+          <!-- <ng-container *ngIf="selectedPackage === 'Ladakh'"> -->
+<!--             
+            <p>
+              London is a cultural melting pot, blending rich history with modern vibrancy. Its iconic landmarks, diverse neighborhoods, and world-class museums make it a must-visit destination. From the historic Tower of London to the bustling streets of Camden Market, there's something for everyone. Explore the city's green spaces like Hyde Park or indulge in the vibrant culinary scene. With its eclectic mix of cultures and attractions, London offers an unforgettable experience for travelers.
+            </p> -->
+          <!-- </ng-container>
+          <ng-container *ngIf="selectedPackage === 'Lakshadweep'">
+            
+            <p>
+              France is known for its romantic ambiance, stunning architecture, and exquisite cuisine. Explore the charming streets of Paris, home to iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum. Experience the picturesque countryside of Provence, famous for its lavender fields and vineyards. Whether you're strolling along the Seine River or savoring a croissant in a quaint café, France captivates with its beauty and elegance.
+            </p>
+          </ng-container>
+          <ng-container *ngIf="selectedPackage === 'Amritsar'">
+            
+            <p>
+              Amritsar is known for its romantic ambiance, stunning architecture, and exquisite cuisine. Explore the charming streets of Paris, home to iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum. Experience the picturesque countryside of Provence, famous for its lavender fields and vineyards. Whether you're strolling along the Seine River or savoring a croissant in a quaint café, France captivates with its beauty and elegance.
+            </p>
+          </ng-container>
+        </div> -->
+        <!-- <div class="bestpack">
+          <h6>Best Package by Travel Arena</h6>
+          <ng-container *ngIf="selectedPackage === 'Ladakh'">
+            <p>Number of days: 3</p>
+            <p>Number of people: 4</p>
+            <p>Travel just at $350</p>
+          </ng-container> -->
+          <!-- <ng-container *ngIf="selectedPackage === 'Lakshadweep'">
+            <p>Number of days: 5</p>
+            <p>Number of people: 2</p>
+            <p>Travel just at $800</p>
+            
+          </ng-container>
+          <ng-container *ngIf="selectedPackage === 'Amritsar'">
+            <p>Number of days: 3</p>
+            <p>Number of people: 5</p>
+            <p>Travel just at $300</p> -->
+            
+          <!-- </ng-container> -->
+        <!-- </div> -->
+        
+        
+      <!-- </div> -->
+      <!-- <ng-template #defaultContent>
+        Default content if no package is selected
+        <h3>No package selected</h3>
+      </ng-template> -->
+
+       <!-- Trip Overview -->
+
+       
+    
+    <div class="trip-overview">
+        <!-- <h3>Trip Overview</h3> -->
+        <span class="arrow"></span>  <h3>  Trip Package</h3>
+        <p *ngIf="selectedPackage === 'Ladakh'">
+            Ladakh is a region in the Indian state of Jammu and Kashmir that currently extends from the Siachen Glacier
+            in the Karakoram range to the main Great Himalayas to the south, inhabited by people of Indo-Aryan and
+            Tibetan descent.
+        </p>
+        <p *ngIf="selectedPackage === 'Lakshadweep'">
+            Lakshadweep, formerly known as the Laccadive, Minicoy, and Aminidivi Islands, is a group of islands in the
+            Laccadive Sea, 200 to 440 km (120 to 270 mi) off the southwestern coast of India.
+        </p>
+        <p *ngIf="selectedPackage === 'Amritsar'">
+            Amritsar is a city in the northwestern Indian state of Punjab, 28 kilometers from the border with Pakistan.
+            At the center of its walled old town, the gilded Golden Temple (Harmandir Sahib) is the holiest gurdwara
+            (religious complex) of the Sikh religion.
+        </p>
+    </div>
+   
+    <!-- Hotel Details -->
+    <div class="hotel-details mt-4">
+        <!-- <i class="bi bi-geo-alt arrow"></i>     -->
+        <h3> Hotel Details</h3>
+        <div class="hotel">
+            <h5>Eco Retreat</h5>
+            <p>Eco Retreat Daringbadi is located in Near Hill View Park, Ladakh-762104</p>
+        </div>
+        <div class="hotel">
+            <h5>Glenn Park Inn</h5>
+            <p>Address: 456 Ocean Boulevard, Ladakh</p>
+        </div>
+        <!-- Add more hotels as needed -->
+    </div>
+
+    <!-- <div class="day-wise-itinerary mt-4">
+        <i class="bi bi-calendar-check arrow"></i>
+        <h3> Day Wise Schedule</h3>
+        <div class="day">
+            <h4>Day 1</h4>
+            <p>ARRIVE AT BHUBANESWAR Our cab will receive guests at BHUBANESWAR Station/Airport, then drive to Daringbadi, after reaching Daringbadi, Check-in at the hotel and enjoy at Daringbadi. Overnight at Eco Retreat Daringbadi</p>
+        </div>
+        <div class="day">
+            <h4>Day 2</h4>
+            <p>After breakfast, go for local sightseeing of Daringbadi. Visit Midubanda Waterfall, Coffee Garden, Pangali Valley, Silent valley, Hill View park, Deers Park, and Doluro River, Pine Forest. Then visit Daringbadi Nature Park, Lovers Paradise, and Emu farm. Have your lunch in between. Then Back to the hotel for dinner and overnight stay.</p>
+        </div>
+        <div class="day">
+            <h4>Day 3</h4>
+            <p>BHUBANESWAR DEPARTURE Morning after Breakfast guest will leave for Bhubaneswar airport happy ending journey with sweet memories.</p>
+        </div>
+    </div> -->
+    
+
+    <div class="day-wise-itinerary mt-4">
+        <div class="day">
+            <h5>Day 1</h5>
+            <p><b>Arrival in Leh:</b>
+                Arrive at Leh by flight.
+                Check-in at your accommodation.</p>
+                <p><b>Acclimatization:</b>
+                Rest and acclimatize to the high altitude.
+                Drink plenty of water and eat light meals.</p>
+            <p><b>Exploring Leh:</b>
+                Visit Leh Palace and Shanti Stupa.
+                Explore the local markets.
+                Enjoy traditional Ladakhi cuisine for dinner.
+            </p>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="day">
+            <h5>Day 2</h5>
+            <p><b>Nubra Valley Excursion:</b>
+                Breakfast at the hotel.
+Drive to Nubra Valley via Khardung La Pass.
+Visit Diskit Monastery and Hunder Sand Dunes.</p>
+                <p><b>Camel Safari and Cultural Experience:</b>
+                    Enjoy a camel safari on the sand dunes.
+                    Visit local villages and interact with the residents.
+                    Overnight stay in a camp or guesthouse in Nubra Valley.</p>
+            
+        </div>
+        <div class="vertical-line"></div>
+        <div class="day">
+            <h5>Day 3</h5>
+            <p><b>Pangong Lake Expedition:</b>
+                Breakfast at the camp/guesthouse.
+Drive to Pangong Lake via Shyok Village.
+Enjoy the breathtaking views of Pangong Lake.</p>
+                <p><b>Relaxation and Exploration:</b>
+                    Spend time by the lake, taking photographs.
+Optional activities: Take a short hike around the lake.
+Return to Leh in the evening.</p>
+        </div>
+    </div>
+    <div class="text-center">
+        <a routerLink="/book" class="btn btn-primary mt-3 custom-button">Lets Go<i class="bi bi-arrow-right"></i></a>
+    </div>
+      
+    </div>
+  </div>
+  
+
+  

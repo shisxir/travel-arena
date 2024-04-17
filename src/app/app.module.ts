@@ -14,6 +14,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
+import { BookingComponent } from './booking/booking.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SearchComponent } from './search/search.component';
     GalleryComponent,
     AboutComponent,
     FooterComponent,
-    SearchComponent
+    SearchComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,
