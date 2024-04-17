@@ -1,71 +1,144 @@
 <app-navbar></app-navbar>
 <section class="packages" id="packages">
-  <div class="container">
-    
-    <div class="main-txt">
-      <h1><span>P</span>ackages</h1>
+    <div class="container">
+      
+      <div class="main-txt">
+        <h1><span>P</span>ackages</h1>
+      </div>
+
+    <div class="row" style="margin-top: 30px;">
+
+        <div class="col-md-4 py-3 py-md-0">
+
+          <div class="card">
+            <img src="assets/images/Ladakh2.jpg" alt="">
+            <div class="card-body">
+              <h3>Ladakh</h3>
+              <p>Discover the Heart of Britain: Where Tradition Meets Innovation</p>
+              <div class="star">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star "></i>
+                <i class="fa-solid fa-star "></i>
+              </div>
+              <h6>Price: <strong>$500</strong></h6>
+              <!-- <a  routerLink="/booking">Book Now</a> -->
+              <a [routerLink]="['/booking']" [queryParams]="{ package: 'Ladakh' }">Book Now</a>
+
+            </div>
+          </div>
+
+      </div>
+      <div class="col-md-4 py-3 py-md-0">
+
+          <div class="card">
+            <img src="assets/images/Maldives2.jpg" alt="">
+            <div class="card-body">
+              <h3>Lakshadweep</h3>
+              <p>Experience the Essence of France: Where Every Moment is a Masterpiece</p>
+              <div class="star">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star "></i>
+                <i class="fa-solid fa-star "></i>
+              </div>
+              <h6>Price: <strong>$500</strong></h6>
+              <!-- <a href="#book">Book Now</a> -->
+              <a [routerLink]="['/booking']" [queryParams]="{ package: 'Lakshadweep' }">Book Now</a>
+            </div>
+          </div>
+
+      </div>
+      <div class="col-md-4 py-3 py-md-0">
+
+          <div class="card">
+            <img src="assets/images/Amritsar2.jpg" alt="">
+            <div class="card-body">
+              <h3>Amritsar</h3>
+              <p>Unlock the Treasures of Pakistan: Where History, Hospitality, and Natural Beauty Unite</p>
+              <div class="star">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star "></i>
+                <i class="fa-solid fa-star "></i>
+              </div>
+              <h6>Price: <strong>$500</strong></h6>
+              <!-- <a href="#book">Book Now</a> -->
+              <a [routerLink]="['/booking']" [queryParams]="{ package: 'Amritsar' }">Book Now</a>
+            </div>
+          </div>
+
+      </div>
+
+
+
     </div>
+
+
 
     <div class="row" style="margin-top: 30px;">
 
       <div class="col-md-4 py-3 py-md-0">
 
-        <div class="card">
-          <img src="assets/images/uk.png" alt="">
-          <div class="card-body">
-            <h3>United Kingdom</h3>
-            <p>Discover the Heart of Britain: Where Tradition Meets Innovation</p>
-            <div class="star">
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star "></i>
-              <i class="fa-solid fa-star "></i>
+          <div class="card">
+            <img src="assets/images/Kedarnath2.jpg" alt="">
+            <div class="card-body">
+              <h3>Kedarnath</h3>
+              <p>Embrace La Dolce Vita: Italy Awaits, Where Every Moment is Magnifico</p>
+              <div class="star">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star "></i>
+                <i class="fa-solid fa-star "></i>
+              </div>
+              <h6>Price: <strong>$500</strong></h6>
+              <a [routerLink]="['/booking']" [queryParams]="{ package: 'Ladakh' }">Book Now</a>
             </div>
-            <h6>Price: <strong>$500</strong></h6>
-            <a href="#book">Book Now</a>
           </div>
-        </div>
 
       </div>
       <div class="col-md-4 py-3 py-md-0">
 
-        <div class="card">
-          <img src="assets/images/france.png" alt="">
-          <div class="card-body">
-            <h3>France</h3>
-            <p>Experience the Essence of France: Where Every Moment is a Masterpiece</p>
-            <div class="star">
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star "></i>
-              <i class="fa-solid fa-star "></i>
+          <div class="card">
+            <img src="assets/images/Agra2.jpg" alt="">
+            <div class="card-body">
+              <h3>Agra</h3>
+              <p>Discover India's Rich Tapestry: Where Heritage, Hospitality, and Harmony Flourish</p>
+              <div class="star">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star "></i>
+                <i class="fa-solid fa-star "></i>
+              </div>
+              <h6>Price: <strong>$500</strong></h6>
+              <a [routerLink]="['/booking']" [queryParams]="{ package: 'Ladakh' }">Book Now</a>
             </div>
-            <h6>Price: <strong>$500</strong></h6>
-            <a href="#book">Book Now</a>
           </div>
-        </div>
 
       </div>
       <div class="col-md-4 py-3 py-md-0">
 
-        <div class="card">
-          <img src="assets/images/pakistan.png" alt="">
-          <div class="card-body">
-            <h3>Pakistan</h3>
-            <p>Unlock the Treasures of Pakistan: Where History, Hospitality, and Natural Beauty Unite</p>
-            <div class="star">
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star "></i>
-              <i class="fa-solid fa-star "></i>
+          <div class="card">
+            <img src="assets/images/Kerala2.jpg" alt="">
+            <div class="card-body">
+              <h3>Kerala</h3>
+              <p>Embark on an American Odyssey: Where Diversity and Discovery Await</p>
+              <div class="star">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star "></i>
+                <i class="fa-solid fa-star "></i>
+              </div>
+              <h6>Price: <strong>$500</strong></h6>
+              <a [routerLink]="['/booking']" [queryParams]="{ package: 'Ladakh' }">Book Now</a>
             </div>
-            <h6>Price: <strong>$500</strong></h6>
-            <a href="#book">Book Now</a>
           </div>
-        </div>
 
       </div>
 
@@ -74,74 +147,9 @@
     </div>
 
 
-
-    <div class="row" style="margin-top: 30px;">
-
-      <div class="col-md-4 py-3 py-md-0">
-
-        <div class="card">
-          <img src="assets/images/italy.png" alt="">
-          <div class="card-body">
-            <h3>Italy</h3>
-            <p>Embrace La Dolce Vita: Italy Awaits, Where Every Moment is Magnifico</p>
-            <div class="star">
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star "></i>
-              <i class="fa-solid fa-star "></i>
-            </div>
-            <h6>Price: <strong>$500</strong></h6>
-            <a href="#book">Book Now</a>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-md-4 py-3 py-md-0">
-
-        <div class="card">
-          <img src="assets/images/india.png" alt="">
-          <div class="card-body">
-            <h3>India</h3>
-            <p>Discover India's Rich Tapestry: Where Heritage, Hospitality, and Harmony Flourish</p>
-            <div class="star">
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star "></i>
-              <i class="fa-solid fa-star "></i>
-            </div>
-            <h6>Price: <strong>$500</strong></h6>
-            <a href="#book">Book Now</a>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-md-4 py-3 py-md-0">
-
-        <div class="card">
-          <img src="assets/images/us.png" alt="">
-          <div class="card-body">
-            <h3>United States</h3>
-            <p>Embark on an American Odyssey: Where Diversity and Discovery Await</p>
-            <div class="star">
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star checked"></i>
-              <i class="fa-solid fa-star "></i>
-              <i class="fa-solid fa-star "></i>
-            </div>
-            <h6>Price: <strong>$500</strong></h6>
-            <a href="#book">Book Now</a>
-          </div>
-        </div>
-
-      </div>
-
-
-
     </div>
 
+   
+  </section>
 
-  </div>
-</section>
+  
