@@ -9,17 +9,20 @@ import { ServicesComponent } from './services/services.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
-
+// import { BookingComponent } from './booking/booking.component';
 const routes: Routes = [
-  { path: 'src\app\homepage', component: HomepageComponent},
-  { path: 'src\app\navbar', component: NavbarComponent},
+  { path: 'homepage', component: HomepageComponent},
+  { path: 'navbar', component: NavbarComponent},
   { path: 'src\app\home-section', component: HomeSectionComponent},
-  { path: 'src\app\book', component: BookComponent},
-  { path: 'src\app\packages', component: PackagesComponent},
-  { path: 'src\app\services', component: ServicesComponent},
+  { path: 'book', component: BookComponent},
+  { path: 'packages', component: PackagesComponent},
   { path: 'src\app\gallery', component: GalleryComponent},
-  { path: 'src\app\about', component: AboutComponent},
-  { path: 'src\app\footer', component: FooterComponent}
+  { path: 'about', component: AboutComponent},
+  { path: 'src\app\footer', component: FooterComponent},
+  // { path: 'booking', component:BookingComponent},
+  // { path: 'login', component: LoginComponent },
+  {path:'',component:HomepageComponent}
+
 ];
 
 @NgModule({

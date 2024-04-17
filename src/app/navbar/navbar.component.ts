@@ -36,7 +36,6 @@ export class NavbarComponent implements OnInit {
     return this.router.url === '/packages';
   }
   isBookPage(): boolean {
-    ;
     return this.router.url === '/book';
   }
 
