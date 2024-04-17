@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'src\app\footer', component: FooterComponent},
   { path: 'booking', component:BookingComponent},
   // { path: 'login', component: LoginComponent },
-  {path:'',component:HomepageComponent}
+  // {path:'',component:HomepageComponent}
 
 ];
 
