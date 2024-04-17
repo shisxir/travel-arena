@@ -56,22 +56,6 @@
     color: #1a2c50;
     font-weight: 900;
 }
-  
-  // /* Add pseudo-elements for circles or curves */
-  // .services::before,
-  // .services::after {
-  //   content: '';
-  //   position: absolute;
-  //   top: -50px;
-  //   left: -50px;
-  //   width: 100px;
-  //   height: 100px;
-  //   border-radius: 50%;
-  //   background-color: #ffa500;
-  //   opacity: 0.5;
-  //   animation: move 10s infinite linear alternate;
-  // }
-  
   .services::after {
     top: auto;
     bottom: -50px;
@@ -87,4 +71,5 @@
       transform: translate(50px, 50px);
     }
   }
+
   
