@@ -9,7 +9,7 @@ import { ServicesComponent } from './services/services.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
-// import { BookingComponent } from './booking/booking.component';
+import { BookingComponent } from './booking/booking.component';
 const routes: Routes = [
   { path: '', component: HomepageComponent},
   { path: 'navbar', component: NavbarComponent},
@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'src\app\gallery', component: GalleryComponent},
   { path: 'about', component: AboutComponent},
   { path: 'src\app\footer', component: FooterComponent},
-  // { path: 'booking', component:BookingComponent},
+  { path: 'booking', component:BookingComponent},
   // { path: 'login', component: LoginComponent },
   {path:'',component:HomepageComponent}
 
