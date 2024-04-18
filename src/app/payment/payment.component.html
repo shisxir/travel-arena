@@ -1,19 +1,43 @@
-<!-- <app-navbar></app-navbar> -->
-<section class="payment">
-    <div class="container mx-3 my-2">
-        <div class="row">
-            <div class="col">
-                <img src="assets\images\france.png" alt="">
-            </div>
-            <div class="col">
-                <div class="main-text">Summary</div>
-                <div class="row-1">Total Price</div>
-                <div class="row-2">Total Price</div>
-                <div class="row-3">Total Price</div>
-                <div class="row-4">Total Price</div>
-                <div class="row-5">Total Price</div>
-                <div class="button">Button</div>
-            </div>
+<div class="mainscreen">
+    <!-- <img src="https://image.freepik.com/free-vector/purple-background-with-neon-frame_52683-34124.jpg"  class="bgimg " alt="">--> 
+      <div class="card">
+        <div class="leftside">
+          <img
+            src="assets\images\Amritsar2.jpg"
+            alt=""
+            style="height: 100%; width: 100%; border-top-left-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;"
+          />
         </div>
+        <div class="rightside">
+          <form action="">
+            <h1>Checkout</h1>
+            <h2>Summary</h2>
+            <p>Price Per Head/Per Day <input type="text" class="inputbox" name="per_head" [value]="'Rs '+checkPrice()" disabled /></p>
+            <!-- <input type="text" class="inputbox" name="name" value="Hello" disabled /> -->
+            <p>Total Price Per Head (No. of Days) <input type="text" class="inputbox" name="total_head" [value]="'Rs '+checkTotalPrice()" disabled /></p>
+            <p>Total Price (All Guests) <input type="text" class="inputbox" name="total_head" [value]="'Rs '+checkAllPrice()" disabled /></p>
+            <p>GST at 18% <input type="text" class="inputbox" name="total_head" [value]="'Rs '+checkGST()" disabled /></p>
+            <p>Net Payable<input type="text" class="inputbox" name="total_head" [value]="'Rs '+netPay()" disabled /></p>
+            <!-- <p>Payment Methods<input type="radio" name="CARD"/><input type="radio" name="UPI"/></p> -->
+            <div class="form-check form-check-inline p-0">
+            Payment Method
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                CARD
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                UPI
+              </label>
+            </div>
+            <button type="submit" class="button" (click)="onSubmit()">Pay Now</button>
+          </form>
+        </div>
+      </div>
     </div>
-</section>
+  

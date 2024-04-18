@@ -263,7 +263,7 @@ Return to Leh in the evening.</p>
         </div>
     </div>
     <div class="text-center">
-        <a routerLink="/book" class="btn btn-primary mt-3 custom-button">Lets Go<i class="bi bi-arrow-right"></i></a>
+        <a [routerLink]="['/book']" [queryParams]="{ package: this.selectedPackage}" class="btn btn-primary mt-3 custom-button">Lets Go<i class="bi bi-arrow-right"></i></a>
     </div>
       
     </div>

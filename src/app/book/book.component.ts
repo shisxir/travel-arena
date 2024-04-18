@@ -3,6 +3,8 @@ import { OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { LocalStorageService } from '../local-storage.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-book',
@@ -12,6 +14,8 @@ import { LocalStorageService } from '../local-storage.service';
 export class BookComponent implements OnInit {
   minDate = new Date();
   currentDate: string;
+  //for query params
+  selectedPackage!: string;
 
   form: FormGroup = new FormGroup({
     fullname: new FormControl(''),
@@ -20,10 +24,13 @@ export class BookComponent implements OnInit {
     noOfDays: new FormControl(''),
     noOfGuests: new FormControl(''),
     extra: new FormControl(''),
+    package: new FormControl({value:'', disabled:true})
   });
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private localStorageService: LocalStorageService) {
+  constructor(private formBuilder: FormBuilder, private router: Router,
+     private localStorageService: LocalStorageService,
+     private route: ActivatedRoute) {
     this.currentDate = this.getCurrentDate();
   }
     getCurrentDate() {
@@ -31,6 +38,9 @@ export class BookComponent implements OnInit {
     return today.toISOString().split('T')[0];
   }
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      this.selectedPackage = params['package'];
+    });
     this.form = this.formBuilder.group(
       {
         fullname: ['', [Validators.required,Validators.pattern('[a-zA-Z ]*')]],
@@ -46,9 +56,13 @@ export class BookComponent implements OnInit {
           ]
         ],
         noOfGuests: ['', Validators.required],
-        extra: ['']
+        extra: [''],
+        package: [this.selectedPackage]
       },
     );
+    // this.route.queryParams.subscribe(params => {
+    //   this.selectedPackage = params['package'];
+    // });
   }
   get f(): { [key: string]: AbstractControl } {
     return this.form.controls;
@@ -63,7 +77,8 @@ export class BookComponent implements OnInit {
     const userId = this.localStorageService.saveFormData(formData);
     this.onReset();
     // alert('Form data saved with user ID:'+userId);
-    this.router.navigate(['/payment']);
+    // this.router.navigate(['/payment']);
+    this.router.navigate(['/payment'], { queryParams: { userId: userId } });
   }
   onReset(): void { 
     this.submitted = false;
