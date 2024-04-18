@@ -24,16 +24,16 @@ export class BookComponent implements OnInit {
     noOfDays: new FormControl(''),
     noOfGuests: new FormControl(''),
     extra: new FormControl(''),
-    package: new FormControl({value:'', disabled:true})
+    package: new FormControl({ value: '', disabled: true })
   });
   submitted = false;
 
   constructor(private formBuilder: FormBuilder, private router: Router,
-     private localStorageService: LocalStorageService,
-     private route: ActivatedRoute) {
+    private localStorageService: LocalStorageService,
+    private route: ActivatedRoute) {
     this.currentDate = this.getCurrentDate();
   }
-    getCurrentDate() {
+  getCurrentDate() {
     const today = new Date();
     return today.toISOString().split('T')[0];
   }
@@ -43,9 +43,9 @@ export class BookComponent implements OnInit {
     });
     this.form = this.formBuilder.group(
       {
-        fullname: ['', [Validators.required,Validators.pattern('[a-zA-Z ]*')]],
+        fullname: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
         email: [
-          '',[Validators.required, Validators.email]
+          '', [Validators.required, Validators.email]
         ],
         date: ['', Validators.required],
         noOfDays: [
@@ -63,6 +63,20 @@ export class BookComponent implements OnInit {
     // this.route.queryParams.subscribe(params => {
     //   this.selectedPackage = params['package'];
     // });
+    const storedData=localStorage.getItem('formData');
+    if(storedData){
+      const data=JSON.parse(storedData);
+      if(data){
+        this.form.patchValue({
+          date: data.departure || '',
+        noOfDays: data.duration || '',
+        noOfGuests: data.guests || ''
+        });
+        
+
+      }
+    }
+
   }
   get f(): { [key: string]: AbstractControl } {
     return this.form.controls;
@@ -80,7 +94,7 @@ export class BookComponent implements OnInit {
     // this.router.navigate(['/payment']);
     this.router.navigate(['/payment'], { queryParams: { userId: userId } });
   }
-  onReset(): void { 
+  onReset(): void {
     this.submitted = false;
     this.form.reset();
   }
