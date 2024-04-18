@@ -20,6 +20,9 @@ import { PaymentPageComponent } from './payment-page/payment-page.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { PaymentComponent } from './payment/payment.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ContactResponseComponent } from './contact-response/contact-response.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -37,16 +40,19 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BookingComponent,
     ReviewsComponent,
     PaymentComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ContactResponseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
