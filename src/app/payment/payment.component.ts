@@ -11,6 +11,7 @@ import { LocalStorageService } from '../local-storage.service';
 })
 export class PaymentComponent implements OnInit {
   userId!: string;
+  images!: string;
   formData: any;
   noOfDays!: string;
   noOfGuests!: number;
