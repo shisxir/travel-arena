@@ -17,7 +17,7 @@ export class SearchComponent {
     guests : ['',[Validators.required,Validators.min(1)]]
   });;
   destinations: string[] = ['Ladakh', 'Lakshadweep', 'Amritsar', 'Kedarnath','Agra', 'Kerala'];
-  durations: number[] = [1,2,3,4,5,6];
+  durations: number[] = [1,2,3,4];
   todayDate: string = new Date().toISOString().split('T')[0];
   // invalidForm:boolean=false;
 
