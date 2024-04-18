@@ -78,7 +78,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     box-shadow: 0px 5px 5px -6px black;
     height: 100px;
 }
-
+//button submit
 .book .submit{
     width: 160px;
     font-size: 16px;
@@ -87,6 +87,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: black;
     margin-top: 10px;
     transition: 0.5s;
+    border-radius: 50px;
 }
 
 .book .submit:hover{
