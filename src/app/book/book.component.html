@@ -2,7 +2,7 @@
   <div class="container">
 
     <div class="main-text">
-      <h1>Book your dream Destination</h1>
+      <h1>Book your destination</h1>
     </div>
 
     <div class="row">
@@ -106,12 +106,13 @@
             } -->
             <div class="col">
               <label>Chosen Package :</label>
-              <input type="text" class="form-control" formControlName="package" readonly />
+              <input type="text" class="form-control" formControlName="package" readonly 
+              style="background-color: #eee;"/>
             </div>
             <div class="col">
               <label>Additional Details :</label>
-            <textarea class="form-control" rows="1" formControlName="extra"
-              [ngClass]="{ 'is-invalid': submitted && f['extra'].errors }"></textarea>
+            <input type="text" class="form-control" placeholder="Mention any special requests (if any)" rows="1" formControlName="extra"
+              [ngClass]="{ 'is-invalid': submitted && f['extra'].errors }">
             @if (submitted && f['extra'].errors) {
             <div class="invalid-feedback">Pls type NA if not Applicable</div>
             }

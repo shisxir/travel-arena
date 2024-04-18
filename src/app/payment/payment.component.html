@@ -11,8 +11,9 @@
         </div>
         <div class="rightside">
           <form action="">
-            <h1>Checkout</h1>
-            <h2>Summary</h2>
+            <h1 style="align-items: flex-end;">Checkout</h1>
+            <h4>Package to {{this.package}}, {{this.noOfDays}} for {{this.noOfGuests}} Guests</h4>
+            <br>
             <p>Price Per Head/Per Day <input type="text" class="inputbox" name="per_head" [value]="'Rs '+checkPrice()" disabled /></p>
             <!-- <input type="text" class="inputbox" name="name" value="Hello" disabled /> -->
             <p>Total Price Per Head (No. of Days) <input type="text" class="inputbox" name="total_head" [value]="'Rs '+checkTotalPrice()" disabled /></p>

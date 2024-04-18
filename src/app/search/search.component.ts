@@ -17,7 +17,7 @@ export class SearchComponent {
     guests : ['',[Validators.required,Validators.min(1)]]
   });;
   destinations: string[] = ['Ladakh', 'Lakshadweep', 'Amritsar', 'Kedarnath','Agra', 'Kerala'];
-  durations: number[] = [1,2,3,4,5,6];
+  durations: string[] = ['2D/1N','3D/2N','4D/3N', '5D,4N'];
   todayDate: string = new Date().toISOString().split('T')[0];
   // invalidForm:boolean=false;
 
@@ -50,15 +50,16 @@ export class SearchComponent {
     };
 
     // sending data to local storage for booking page
-    const destination = this.searchForm.get('destination')?.value;
-    const departure = this.searchForm.get('departure')?.value;
-    const duration = this.searchForm.get('duration')?.value;
-    const guests = this.searchForm.get('guests')?.value;
-    localStorage.setItem('destination', destination);
-    localStorage.setItem('departure', departure);
-    localStorage.setItem('duration', duration);
-    localStorage.setItem('guests', guests);
+    // const destination = this.searchForm.get('destination')?.value;
+    // const departure = this.searchForm.get('departure')?.value||undefined;
+    // const duration = this.searchForm.get('duration')?.value||undefined;
+    // const guests = this.searchForm.get('guests')?.value||undefined;
+    // localStorage.setItem('destination', destination);
+    // localStorage.setItem('departure', departure);
+    // localStorage.setItem('duration', duration);
+    // localStorage.setItem('guests', guests);
     // data stored in local storage
+    localStorage.setItem('formData', JSON.stringify(this.searchForm.value))
 
     this.router.navigate(['/booking'],navigationExtras)
   }
