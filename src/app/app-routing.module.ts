@@ -14,12 +14,13 @@ import { PaymentComponent } from './payment/payment.component';
 const routes: Routes = [
   { path: '', component: HomepageComponent},
   { path: 'navbar', component: NavbarComponent},
-  { path: 'src\app\home-section', component: HomeSectionComponent},
+  { path: 'home-section', component: HomeSectionComponent},
   { path: 'book', component: BookComponent},
   { path: 'packages', component: PackagesComponent},
-  { path: 'src\app\gallery', component: GalleryComponent},
+  { path: 'gallery', component: GalleryComponent},
   { path: 'about', component: AboutComponent},
-  { path: 'src\app\footer', component: FooterComponent},
+  { path: 'footer', component: FooterComponent},
+  { path: 'booking/:selectedDestination', component:BookingComponent},
   { path: 'booking', component:BookingComponent},
   {path: 'payment', component:PaymentComponent}
   // { path: 'login', component: LoginComponent },

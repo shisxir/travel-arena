@@ -3,10 +3,7 @@
 @import "../../../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css";
 //@import "../../../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.min.css";
 
-.searchbar{
-  background-color: #F4F7FE;
-}
-.booking{
+.searching{
     background: transparent;
     padding: 20px 40px;
     position: relative;
@@ -14,8 +11,8 @@
     z-index: 1;
 }
 
-#bookButton{
-    background-color: #ffa500;
+#searchButton{
+    background-color: #005665;
 }
 /******* Bootstrap Theming ********/
 /*!
