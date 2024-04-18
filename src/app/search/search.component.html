@@ -49,8 +49,7 @@
                                         <select class="form-control custom-select px-4" formControlName="duration"
                                             style="height: 47px;">
                                             <option value="" disabled selected>Duration</option>
-                                            <option *ngFor="let duration of durations" [value]="duration">{{ duration }}
-                                                Day{{ duration == 1 ? '' : 's' }} {{ duration + 1 }} Nights</option>
+                                            <option *ngFor="let duration of durations" [value]="duration">{{ duration + 1}}D/{{ duration }}N</option>
                                         </select>
                                         <div
                                             *ngIf="searchForm.get('duration')?.invalid && searchForm.get('duration')?.dirty">
@@ -87,7 +86,7 @@
                         </div> -->
                         <div class="col-md-2 mt-2">
                             <button id="searchButton" class="btn btn-primary btn-block" type="submit"
-                                style="height: 47px; margin-top: -2px;" [disabled]="!searchForm.get('destination')?.value">Submit</button>
+                                style="height: 47px; margin-top: -2px; position:relative;" [disabled]="!searchForm.get('destination')?.value">Submit</button>
                         </div>
                     </div>
                 </div>
