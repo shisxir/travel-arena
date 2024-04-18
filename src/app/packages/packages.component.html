@@ -1,43 +1,60 @@
 <!-- <app-navbar></app-navbar> -->
 <section class="packages" id="packages">
     <div class="container">
-      
+     
       <div class="main-txt">
         <h1><span>P</span>ackages</h1>
       </div>
-
-    <div class="row" style="margin-top: 30px;">
-
+ 
+      <div class="row" style="margin-top: 30px;">
+ 
         <div class="col-md-4 py-3 py-md-0">
-
+ 
           <div class="card">
             <img src="assets/images/Ladakh2.jpg" alt="">
             <div class="card-body">
-              <h3>Ladakh</h3>
-              <p>Experience the thrill of high-altitude trekking and immerse yourself in the stunning landscapes of Ladakh.</p>
-              <div class="star">
-                <i class="fa-solid fa-star checked"></i>
-                <i class="fa-solid fa-star checked"></i>
-                <i class="fa-solid fa-star checked"></i>
-                <i class="fa-solid fa-star "></i>
-                <i class="fa-solid fa-star "></i>
+                <h3>Ladakh</h3>
+                <p>Ladakh is known for its breathtaking landscapes, including high mountain ranges and crystal-clear lakes. </p>
+                <div class="star">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star "></i>
+                    <i class="fa-solid fa-star "></i>
+                </div>
+                <!-- Updated price format -->
+                <!-- <h6>
+                    Price: $500/per person
+                </h6>  -->
+                <!-- Updated features -->
+                <ul>
+                    <li>Round Trip Flights</li>
+                    <li>Intercity Car Transfers</li>
+                    <li>3 Star Hotels & 3 Star Houseboat</li>
+                </ul>
+                <!-- Updated services with tick marks -->
+                <ul class="tick-list">
+                  <li>&#10003; Indian lunch</li>
+                  <li>&#10003; Night Tour</li>
+                  <li>&#10003; Photoshoot</li>
+              </ul>
+                <!-- Book Now button -->
+                <div class="price-and-button">
+                  <h6>Starting from <strong>11,999/-</strong></h6>
+                  <a class="book-now-btn" [routerLink]="['/booking']" [queryParams]="{ package: 'Ladakh' }">Book Now</a>
               </div>
-              <h6>Price: <small>₹23,000</small></h6>
-
-              <!-- <a  routerLink="/booking">Book Now</a> -->
-              <a [routerLink]="['/booking']" [queryParams]="{ package: 'Ladakh' }">Book Now</a>
-
             </div>
-          </div>
-
-      </div>
-      <div class="col-md-4 py-3 py-md-0">
-
+        </div>
+       
+ 
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+ 
           <div class="card">
             <img src="assets/images/Maldives2.jpg" alt="">
             <div class="card-body">
               <h3>Lakshadweep</h3>
-              <p> Dive into the crystal-clear waters and relax on the pristine beaches of Lakshadweep. A beautiful destination awaits</p>
+              <p>Dive into crystal-clear waters, explore vibrant coral reefs, and embrace the tranquility of island life.</p>
               <div class="star">
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
@@ -45,20 +62,33 @@
                 <i class="fa-solid fa-star "></i>
                 <i class="fa-solid fa-star "></i>
               </div>
-              <h6>Price: <small>₹32,000</small></h6>
-              <!-- <a href="#book">Book Now</a> -->
-              <a [routerLink]="['/booking']" [queryParams]="{ package: 'Lakshadweep' }">Book Now</a>
+              <ul>
+                <li>Round Trip Flights</li>
+                <li>Airport Transfers</li>
+                <li>Selected Meals</li>
+            </ul>
+            <!-- Updated services with tick marks -->
+            <ul class="tick-list">
+              <li>&#10003; City Tour</li>
+              <li>&#10003; Cellular Jail</li>
+              <li>&#10003; Evening Snacks</li>
+          </ul>
+            <!-- Book Now button -->
+            <div class="price-and-button">
+              <h6>Starting from <strong>13,999/-</strong></h6>
+              <a class="book-now-btn" [routerLink]="['/booking']" [queryParams]="{ package: 'Lakshadweep' }">Book Now</a>
+          </div>
             </div>
           </div>
-
-      </div>
-      <div class="col-md-4 py-3 py-md-0">
-
+ 
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+ 
           <div class="card">
             <img src="assets/images/Amritsar2.jpg" alt="">
             <div class="card-body">
               <h3>Amritsar</h3>
-              <p>Immerse yourself in the beauty of the Golden Temple and the charm of Amritsar with our curated travel package.</p>
+              <p>Immerse yourself in the rich cultural tapestry of Amritsar as you explore  the majestic Golden Temple.</p>
               <div class="star">
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
@@ -66,29 +96,42 @@
                 <i class="fa-solid fa-star "></i>
                 <i class="fa-solid fa-star "></i>
               </div>
-              <h6>Price: <small>₹17,000</small></h6>
-              <!-- <a href="#book">Book Now</a> -->
-              <a [routerLink]="['/booking']" [queryParams]="{ package: 'Amritsar' }">Book Now</a>
+              <ul>
+                <li>Airport Pickup and Drop</li>
+                <li>Intercity Car Transfers</li>
+                <li>3 Star Hotels</li>
+            </ul>
+            <!-- Updated services with tick marks -->
+            <ul class="tick-list">
+              <li>&#10003; Indian lunch</li>
+              <li>&#10003; Night Tour</li>
+              <li>&#10003; Photoshoot</li>
+          </ul>
+            <!-- Book Now button -->
+            <div class="price-and-button">
+              <h6>Starting from <strong>8,999/-</strong></h6>
+              <a class="book-now-btn" [routerLink]="['/booking']" [queryParams]="{ package: 'Amritsar' }">Book Now</a>
+          </div>
             </div>
           </div>
-
+ 
+        </div>
+ 
+ 
+ 
       </div>
-
-
-
-    </div>
-
-
-
-    <div class="row" style="margin-top: 30px;">
-
-      <div class="col-md-4 py-3 py-md-0">
-
+ 
+ 
+ 
+      <div class="row" style="margin-top: 30px;">
+ 
+        <div class="col-md-4 py-3 py-md-0">
+ 
           <div class="card">
             <img src="assets/images/Kedarnath2.jpg" alt="">
             <div class="card-body">
               <h3>Kedarnath</h3>
-              <p>Embark on a spiritual journey to the sacred Kedarnath with our pilgrimage package, offering tranquility and divine blessings.</p>
+              <p>Experience the serenity of Kedarnath as you and your family immerse yourself in devotion.</p>
               <div class="star">
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
@@ -96,19 +139,33 @@
                 <i class="fa-solid fa-star "></i>
                 <i class="fa-solid fa-star "></i>
               </div>
-              <h6>Price: <small>₹27,000</small></h6>
-              <a [routerLink]="['/book']" [queryParams]="{ package: 'Kedarnath' }">Book Now</a>
+              <ul>
+                <li>Round Trip Flights</li>
+                <li>Intercity Car Transfers</li>
+                <li>3 Star Hotels & 3 Star Houseboat</li>
+            </ul>
+            <!-- Updated services with tick marks -->
+            <ul class="tick-list">
+              <li>&#10003; Indian lunch</li>
+              <li>&#10003; Night Tour</li>
+              <li>&#10003; Photoshoot</li>
+          </ul>
+            <!-- Book Now button -->
+            <div class="price-and-button">
+              <h6>Starting from <strong>5,999/-</strong></h6>
+              <a class="book-now-btn" [routerLink]="['/book']" [queryParams]="{ package: 'Kedarnath' }">Book Now</a>
+          </div>
             </div>
           </div>
-
-      </div>
-      <div class="col-md-4 py-3 py-md-0">
-
+ 
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+ 
           <div class="card">
             <img src="assets/images/Agra2.jpg" alt="">
             <div class="card-body">
               <h3>Agra</h3>
-              <p>Discover the rich heritage of Agra with our guided tour, including visits to the  Taj Mahal and other historical landmarks</p>
+              <p>Explore the timeless allure of Agra, a city that wears its rich history like a crown jewel.</p>
               <div class="star">
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
@@ -116,19 +173,33 @@
                 <i class="fa-solid fa-star "></i>
                 <i class="fa-solid fa-star "></i>
               </div>
-              <h6>Price: <small>₹22,000</small></h6>
-              <a [routerLink]="['/book']" [queryParams]="{ package: 'Agra' }">Book Now</a>
+              <ul>
+                <li>Round Trip Flights</li>
+                <li>Intercity Car Transfers</li>
+                <li>3 Star Hotels & 3 Star Houseboat</li>
+            </ul>
+            <!-- Updated services with tick marks -->
+            <ul class="tick-list">
+              <li>&#10003; Indian lunch</li>
+              <li>&#10003; Night Tour</li>
+              <li>&#10003; Photoshoot</li>
+          </ul>
+            <!-- Book Now button -->
+            <div class="price-and-button">
+              <h6>Starting from <strong>9,999/-</strong></h6>
+              <a class="book-now-btn" [routerLink]="['/book']" [queryParams]="{ package: 'Agra' }">Book Now</a>
+          </div>
             </div>
           </div>
-
-      </div>
-      <div class="col-md-4 py-3 py-md-0">
-
+ 
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+ 
           <div class="card">
-            <img src="assets/images/keralaupdatAN.jpg" alt="">
+            <img src="assets/images/Kerala3.jpeg" alt="">
             <div class="card-body">
               <h3>Kerala</h3>
-              <p>Immerse yourself in Kerala's backwaters , offering houseboat stays and boat rides amidst lush greenery and tranquil waters.</p>
+              <p>Discover the enchanting beauty of Kerala, a land blessed with serene backwaters and pristine beaches. </p>
               <div class="star">
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
@@ -136,21 +207,51 @@
                 <i class="fa-solid fa-star "></i>
                 <i class="fa-solid fa-star "></i>
               </div>
-              <h6>Price: <small>₹26,000</small></h6>
-              <a [routerLink]="['/book']" [queryParams]="{ package: 'Kerala' }">Book Now</a>
+              <ul>
+                <li>Round Trip Flights</li>
+                <li>Intercity Car Transfers</li>
+                <li>3 Star Hotels & 3 Star Houseboat</li>
+            </ul>
+            <!-- Updated services with tick marks -->
+            <ul class="tick-list">
+              <li>&#10003; Indian lunch</li>
+              <li>&#10003; Night Tour</li>
+              <li>&#10003; Photoshoot</li>
+          </ul>
+            <!-- Book Now button -->
+            <div class="price-and-button">
+              <h6>Starting from <strong>12,599/-</strong></h6>
+              <a class="book-now-btn" [routerLink]="['/book']" [queryParams]="{ package: 'Kerala' }">Book Now</a>
+          </div>
             </div>
           </div>
-
+ 
+        </div>
+ 
+ 
+ 
       </div>
-
-
-
+ 
+ 
     </div>
-
-
-    </div>
-
+ 
    
   </section>
-
-  
+ 
+ 
+  <footer id="footer">
+    <h1><span>V</span>oyager</h1>
+    <p>Thank-you for visiting our page.</p>
+    <div class="social-links">
+      <a href="https://twitter.com/your_twitter_handle" target="_blank"><i class="bi bi-twitter"></i></a>
+      <a href="https://www.facebook.com/your_facebook_page" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/your_instagram_account" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.youtube.com/your_youtube_channel" target="_blank"><i class="bi bi-youtube"></i></a>
+      <a href="https://www.pinterest.com/your_pinterest_account" target="_blank"><i class="bi bi-pinterest"></i></a>
+    </div>
+    <div class="credit" style="margin: 15px 0;">
+      <p>© 2024 Voyager PVT. LTD.
+ 
+         <b>Country India USA UAE</b></p>
+    </div>
+  </footer>
