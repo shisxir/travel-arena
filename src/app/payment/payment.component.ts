@@ -108,4 +108,33 @@ export class PaymentComponent implements OnInit {
   netPay(){
     return this.checkGST()+this.checkAllPrice();
   }
+  checkImage(){
+    if (this.package === 'Ladakh') {
+      this.images = '11999';
+      return this.images;
+
+    } else if (this.package === 'Lakshadweep') {
+      this.images = '11999';
+      return this.images;
+
+    } else if (this.package === 'Amritsar') {
+      this.images = '11999';
+      return this.images;
+
+    } else if (this.package === 'Kedarnath') {
+      this.images = '11999';
+      return this.images;
+
+
+    } else if (this.package === 'Agra') {
+      this.images = '11999';
+      return this.images;
+
+    } else if (this.package === 'Kerala') {
+      this.images = '11999';
+      return this.images;
+    }else{
+      return this.images;
+    }
+  }
 }
