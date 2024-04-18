@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@400;500;600&display=swap");
 body {
   background: linear-gradient(120deg, #58b0c0, #78cedd, #90cbd5, #e3e0dc);
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif; /* Adjust font family as needed */
+  font-family: 'Noto serif', serif; /* Adjust font family as needed */
 }
 .container {
     max-width: 800px;
@@ -15,6 +16,7 @@ body {
   h2 {
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Noto serif', serif;
   }
  
   .carousel-item img {
@@ -64,11 +66,13 @@ body {
     width: 300px; /* Set a fixed width */
     margin: 20px auto 0 auto; /* Center the element horizontally */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    font-family: 'Poppins', sans-serif;
   }
  
   .bestpack h6 {
     margin-bottom: 10px; /* Add some space below the heading */
     color: #333; /* Dark text color */
+    font-family: 'Noto serif', serif;
   }
  
   .bestpack p {
@@ -115,6 +119,7 @@ body {
 .hotel-details h3 {
     // text-align: center;
     margin-bottom: 20px;
+    font-family: 'Noto serif', serif;
 }
  
 .hotel {
@@ -123,6 +128,7 @@ body {
  
 .hotel h4 {
     margin-bottom: 5px;
+    font-family: 'Noto serif', serif;
 }
  
 .hotel p {
@@ -143,6 +149,7 @@ body {
     // font-weight: bold;
     margin-bottom: 20px;
     position: relative;
+    font-family: 'Poppins', sans-serif;
 }
  
 .day {
@@ -157,6 +164,7 @@ body {
     padding: 5px 10px;
     border-radius: 20px; /* Rounded rectangle */
     display: inline-block;
+    font-family: 'Noto serif', serif;
 }
  
 .arrow {
@@ -179,4 +187,5 @@ body {
  
 .hotel-text {
   flex: 2;
+  font-family: 'Poppins', sans-serif;
 }

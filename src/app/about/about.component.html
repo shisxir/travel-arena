@@ -1,4 +1,4 @@
-<section class="about" id="about">
+<!-- <section class="about" id="about">
     <div class="container">
 
       <div class="main-txt">
@@ -25,4 +25,99 @@
       </div>
 
     </div>
-  </section>
+  </section> -->
+
+<!-- about.component.html -->
+<!-- <div class="container" style="background: url('assets/images/pic2.jpg');background-size: cover;">
+  <div class="about-section">
+      <div class="inner-container">
+          <h1>About Us</h1>
+          <p class="text" style="color: #005665;">
+              Established in 2024 and originating in Bangalore, Voyager is your premier destination for extraordinary journeys worldwide. We are dedicated to providing exceptional travel packages that combine great value with excellent service. <span id="more">Our personalized packages cater to your preferences, ensuring every aspect of your journey is precisely what you desire. Embark on a journey of discovery with Voyager Travel. Your adventure starts here.</span>
+          </p>
+          <button onclick="myFunction()" id="myBtn" class="read-more-btn">Read More</button>
+      </div>
+  </div>
+  <div class="contact-section">
+      <div class="contact-box">
+          <div class="left" style="background: url('assets/images/bg.jpg') no-repeat center; background-size: cover; height: 100%;"></div>
+          <div class="right">
+              <h2>Contact Us</h2>
+              <input type="text" class="field" placeholder="Your Name">
+              <input type="text" class="field" placeholder="Your Email">
+              <input type="text" class="field" placeholder="Phone">
+              <textarea placeholder="Message" class="field"></textarea>
+              <button class="btn">Send</button>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+<!-- Your HTML code with adjusted error handling -->
+<!-- <div class="container">
+  <div class="about-section col-md-4">
+    <div class="inner-container">
+      <h1>About Us</h1>
+      <p class="text" style="color: #005665;">
+        Established in 2024 and originating in Bangalore, Voyager is your premier destination for extraordinary journeys worldwide. We are dedicated to providing exceptional travel packages that combine great value with excellent service. <span *ngIf="showMore" id="more">Our personalized packages cater to your preferences, ensuring every aspect of your journey is precisely what you desire. Embark on a journey of discovery with Voyager Travel. Your adventure starts here.</span>
+      </p>
+      <button (click)="toggleText()" id="myBtn" class="read-more-btn">Read More</button>
+    </div>
+  </div>
+  <div class="contact-section col-md-8">
+    <div class="contact-box">
+      <div class="left" style="background: url('assets/images/bg.jpg') no-repeat center; background-size: cover; height: 100%;"></div>
+      <div class="right">
+        <h2>Contact Us</h2>
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+          <input type="text" class="field" placeholder="Your Name" formControlName="name">
+          <div *ngIf="submitted && contactForm.controls['name'].errors?.['required']" class="error">Name is required</div>
+          <input type="email" class="field" placeholder="Your Email" formControlName="email">
+          <div *ngIf="submitted && contactForm.controls['email'].errors?.['required']" class="error">Email is required</div>
+          <div *ngIf="submitted && contactForm.controls['email'].errors?.['email']" class="error">Invalid email</div>
+          <input type="tel" class="field" placeholder="Phone" formControlName="phone">
+          <div *ngIf="submitted && contactForm.controls['phone'].errors?.['required']" class="error">Phone is required</div>
+          <div *ngIf="submitted && contactForm.controls['phone'].errors?.['pattern']" class="error">Invalid phone number</div>
+          <textarea placeholder="Message" class="field" formControlName="message"></textarea>
+          <div *ngIf="submitted && contactForm.controls['message'].errors?.['required']" class="error">Message is required</div>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="d-flex container">
+  <div class="row" style="margin-top: 40px;">
+    <div class="about-section col-md-4">
+      <div class="inner-container">
+        <h1>About Us</h1>
+        <p class="text" style="color: #005665;">
+          Established in 2024 and originating in Bangalore, Voyager is your premier destination for extraordinary journeys worldwide. We are dedicated to providing exceptional travel packages that combine great value with excellent service. <span *ngIf="showMore" id="more">Our personalized packages cater to your preferences, ensuring every aspect of your journey is precisely what you desire. Embark on a journey of discovery with Voyager Travel. Your adventure starts here.</span>
+        </p>
+        <button (click)="toggleText()" id="myBtn" class="read-more-btn">Read More</button>
+      </div>
+    </div>
+    <div class="contact-section col-md-8">
+      <div class="contact-box">
+        <div class="left" style="background: url('assets/images/bg.jpg') no-repeat center; background-size: cover; height: 100%;"></div>
+        <div class="right">
+          <h2>Contact Us</h2>
+          <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+            <input type="text" class="field" placeholder="Your Name" formControlName="name">
+            <div *ngIf="submitted && contactForm.controls['name'].errors?.['required']" class="error">Name is required</div>
+            <input type="email" class="field" placeholder="Your Email" formControlName="email">
+            <div *ngIf="submitted && contactForm.controls['email'].errors?.['required']" class="error">Email is required</div>
+            <div *ngIf="submitted && contactForm.controls['email'].errors?.['email']" class="error">Invalid email</div>
+            <input type="tel" class="field" placeholder="Phone" formControlName="phone">
+            <div *ngIf="submitted && contactForm.controls['phone'].errors?.['required']" class="error">Phone is required</div>
+            <div *ngIf="submitted && contactForm.controls['phone'].errors?.['pattern']" class="error">Invalid phone number</div>
+            <textarea placeholder="Message" class="field" formControlName="message"></textarea>
+            <div *ngIf="submitted && contactForm.controls['message'].errors?.['required']" class="error">Message is required</div>
+            <button type="submit" class="btn">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
