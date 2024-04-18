@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { BookingComponent } from './booking/booking.component';
 import { PaymentComponent } from './payment/payment.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 const routes: Routes = [
   { path: '', component: HomepageComponent},
   { path: 'navbar', component: NavbarComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'footer', component: FooterComponent},
   { path: 'booking/:selectedDestination', component:BookingComponent},
   { path: 'booking', component:BookingComponent},
-  {path: 'payment', component:PaymentComponent}
+  {path: 'payment', component:PaymentComponent},
+  { path:'**', component:PageNotFoundComponent}
   // { path: 'login', component: LoginComponent },
   // {path:'',component:HomepageComponent}
 

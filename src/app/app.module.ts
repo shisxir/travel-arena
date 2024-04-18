@@ -19,6 +19,7 @@ import { PaymentPageComponent } from './payment-page/payment-page.component';
 
 import { ReviewsComponent } from './reviews/reviews.component';
 import { PaymentComponent } from './payment/payment.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { PaymentComponent } from './payment/payment.component';
     SearchComponent,
     BookingComponent,
     ReviewsComponent,
-    PaymentComponent
+    PaymentComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
