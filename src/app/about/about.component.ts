@@ -16,7 +16,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 export class AboutComponent implements OnInit {
   contactForm: FormGroup = this.formBuilder.group({
-    name: ['', Validators.required],
+    name: ['', [Validators.required, Validators.pattern('[a-zA-Z]*')]],
     email: ['', [Validators.required, Validators.email]],
     phone: ['', [Validators.required, Validators.pattern('[0-9]{10}')]],
     message: ['', Validators.required]}) // Add definite assignment assertion

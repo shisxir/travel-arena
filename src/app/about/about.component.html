@@ -94,7 +94,7 @@
         <p class="text" style="color: #005665;">
           Established in 2024 and originating in Bangalore, Voyager is your premier destination for extraordinary journeys worldwide. We are dedicated to providing exceptional travel packages that combine great value with excellent service. <span *ngIf="showMore" id="more">Our personalized packages cater to your preferences, ensuring every aspect of your journey is precisely what you desire. Embark on a journey of discovery with Voyager Travel. Your adventure starts here.</span>
         </p>
-        <button (click)="toggleText()" id="myBtn" class="read-more-btn">Read More</button>
+        <button (click)="toggleText()" id="myBtn" class="read-more-btn">{{ showMore ? 'Read Less' : 'Read More' }}</button>
       </div>
     </div>
     <div class="contact-section col-md-8">
@@ -105,6 +105,7 @@
           <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
             <input type="text" class="field" placeholder="Your Name" formControlName="name">
             <div *ngIf="submitted && contactForm.controls['name'].errors?.['required']" class="error">Name is required</div>
+            <div *ngIf="submitted && contactForm.controls['name'].errors?.['pattern']" class="error">Name must contain only letters</div>
             <input type="email" class="field" placeholder="Your Email" formControlName="email">
             <div *ngIf="submitted && contactForm.controls['email'].errors?.['required']" class="error">Email is required</div>
             <div *ngIf="submitted && contactForm.controls['email'].errors?.['email']" class="error">Invalid email</div>
