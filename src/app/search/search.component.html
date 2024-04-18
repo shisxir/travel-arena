@@ -17,9 +17,10 @@
                                             <option *ngFor="let destination of destinations" [value]="destination">
                                                 {{destination}}</option>
                                         </select>
-                                        <div
-                                            *ngIf="searchForm.get('destination')?.invalid && (searchForm.get('destination')?.dirty || searchForm.get('destination')?.touched)">
-                                            <span class="text-danger">Destination is required</span>
+                                        <div>
+                                            <span class="text-danger"
+                                                *ngIf="searchForm.get('destination')?.invalid && (searchForm.get('destination')?.dirty || searchForm.get('destination')?.touched)">Destination
+                                                is required</span>
                                         </div>
                                     </div>
                                 </div>
@@ -33,9 +34,10 @@
                                             <input type="text" class="form-control p-4" formControlName="departure"
                                                 placeholder="Depart Date" [min]="todayDate" (focus)="onFocus($event)"
                                                 (blur)="onBlur($event)" />
-                                            <div
-                                                *ngIf="searchForm.get('depatureDate')?.invalid && searchForm.get('depatureDate')?.dirty">
-                                                <span class="text-danger">Departure Date is required</span>
+                                            <div>
+                                                <span class="text-danger"
+                                                    *ngIf="searchForm.get('depatureDate')?.invalid && searchForm.get('depatureDate')?.dirty">Departure
+                                                    Date is required</span>
                                                 <!-- <span class="text-danger" *ngIf="searchForm.get('depatureDate')?.errors?.invalidDate">Departure Date must be greater than today</span> -->
                                             </div>
                                         </div>
@@ -49,11 +51,13 @@
                                         <select class="form-control custom-select px-4" formControlName="duration"
                                             style="height: 47px;">
                                             <option value="" disabled selected>Duration</option>
-                                            <option *ngFor="let duration of durations" [value]="duration">{{ duration + 1}}D/{{ duration }}N</option>
+                                            <option *ngFor="let duration of durations" [value]="duration">{{ duration}}
+                                            </option>
                                         </select>
-                                        <div
-                                            *ngIf="searchForm.get('duration')?.invalid && searchForm.get('duration')?.dirty">
-                                            <span class="text-danger">Duration is required</span>
+                                        <div>
+                                            <span class="text-danger"
+                                                *ngIf="searchForm.get('duration')?.invalid && searchForm.get('duration')?.dirty">Duration
+                                                is required</span>
                                         </div>
                                     </div>
                                 </div>
@@ -66,9 +70,10 @@
                                             <input type="number" class="form-control p-4" formControlName="guests"
                                                 placeholder="Guests" min="1" />
                                         </div>
-                                        <div
-                                            *ngIf="searchForm.get('guests')?.invalid && searchForm.get('guests')?.dirty">
-                                            <span class="text-danger">Guests is required</span>
+                                        <div>
+                                            <span class="text-danger"
+                                                *ngIf="searchForm.get('guests')?.invalid && searchForm.get('guests')?.dirty">Guests
+                                                is required</span>
                                             <!-- <span class="text-danger" *ngIf="searchForm.get('guests').errors?.min">Guests must be at least 1</span> -->
                                         </div>
                                     </div>
@@ -86,7 +91,8 @@
                         </div> -->
                         <div class="col-md-2 mt-2">
                             <button id="searchButton" class="btn btn-primary btn-block" type="submit"
-                                style="height: 47px; margin-top: -2px; position:relative;" [disabled]="!searchForm.get('destination')?.value">Submit</button>
+                                style="height: 47px; margin-top: -2px; position:relative;"
+                                [disabled]="!searchForm.get('destination')?.value">Submit</button>
                         </div>
                     </div>
                 </div>
