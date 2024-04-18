@@ -1,71 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@400;500;600&display=swap");
+
 .packages{
     background-color: #f4f7fe;
-
+    // padding-bottom: 20px;
 }
-.main-txt h1{
-    color: white;
+.main-txt h1 {
     text-align: center;
-    text-shadow: 0px 1px 1px #33333383;
-    color: #1a2c50;
+    margin-top: 0;
     font-weight: 600;
-}
-
-.main-txt span{
+    text-shadow: 0px 1px 1px black;
+    font-family: 'Noto serif', serif;
     color: #1a2c50;
-    font-weight: 600;
+    padding-top: 25px;
 }
-
-.packages .row{
+ 
+.main-txt span {
+    color: #1a2c50;
+}
+ 
+.packages .row {
     display: flex;
     justify-content: space-between;
 }
-
-.packages .card{
+ 
+.packages .card {
     flex: 0 0 calc(33.33% - 20px);
-    //max-width: calc(33.33% - 20px);
     margin-right: 20px;
     box-sizing: border-box;
-    border-radius: 5px;
-    border: none;
-    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    border-radius: 15px;
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px;
     height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
-
-.packages .card img{
+ 
+.packages .card:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 30px;
+}
+ 
+.packages .card img {
     border-radius: 5px;
     height: auto;
 }
-
-.packages .card .card-body{
+ 
+.packages .card .card-body {
     background: transparent;
 }
-
-.packages .card .card-body h3{
+ 
+.packages .card .card-body h3 {
     font-size: 25px;
     font-weight: 600;
+    font-family: 'Noto serif', serif;
 }
-
-.packages .card .card-body p{
+ 
+.packages .card .card-body p {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+.checked {
+    color: #005665;
+}
+ 
+.star i {
     font-size: 15px;
 }
-
-.checked{
-    color: #ffa500;
-}
-
-.star i{
+ 
+.packages .card .card-body h6 {
     font-size: 15px;
-}
+    font-family: 'Poppins', sans-serif;
 
-.packages .card .card-body h6{
-    font-size: 20px;
 }
-
-.packages .card .card-body a{
+ 
+.packages .card .card-body a {
     padding: 10px;
     text-decoration: none;
-    background: #ffa500;
+    background: #005665;
     color: white;
     border-radius: 5px;
 }
-
+ 
+#footer {
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+    background: #e9f1fa;
+}
+ 
+#footer h1 {
+    font-weight: 600;
+    padding-top: 0;
+    text-shadow: 0px 0px 1px black;
+    font-family: 'Noto serif', serif;
+    color: #1a2c50;
+}
+ 
+#footer h1 span {
+    color: #1a2c50;
+    font-family: 'Noto serif', serif;
+}
+ 
+.social-links a {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    background: black;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+.social-links a:hover {
+    background: #005665;
+}
+ 
+.credit {
+    margin-top: 15px;
+}
+ 
+// .packages .card .card-body h6 {
+//     font-size: 16px;
+//     color: #005665;
+//     margin-top: 5px;
+// }
+ 
+// .packages .card .card-body h6 small {
+//     font-size: 12px;
+//     color: rgba(0, 0, 0, 0.7);
+// }
+ 
+ 
+// .card .card-body {
+//     position: relative;
+// }
+ 
+// .card .book-now-btn {
+//     position: absolute;
+//     bottom: 10px;
+//     right: 10px;
+// }
+ 
+.tick-list {
+    list-style: none;
+    padding-left: 0;
+}
+ 
+.tick-list li {
+    margin-bottom: 5px;
+}
+ 
+.per-head {
+    display: block; /* Make it a block-level element */
+}
+ 
+.price-and-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: small;
+}
+ 
+.book-now-btn {
+    padding: 10px;
+    text-decoration: none;
+    background: #005665;
+    color: white;
+    border-radius: 5px;
+}
+ 
+/* Adjust margin as needed */
+.book-now-btn {
+    margin-left: auto;
+}
+ 
