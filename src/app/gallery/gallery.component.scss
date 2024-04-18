@@ -1,10 +1,7 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Jersey+10&family=Russo+One&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@400;500;600&display=swap");
-
 .gallery{
-  background-color: #F4F7FE;
+  background-color: #f4f7fe;
 }
 .overlay {
     position: absolute;
@@ -24,7 +21,7 @@
   }
  
   .text {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Fugaz One', sans-serif;
     font-style: normal;
     font-weight: 400;
     color: white; /* Light black/ash color */
@@ -54,22 +51,43 @@
     filter: grayscale(40%);
   }
  
-  .main-txt h1{
-    color: white;
+  .main-txt h1 {
     text-align: center;
+    margin-top: 0;
     font-weight: 600;
-    text-shadow: 0px 1px 1px #33333383;
+    text-shadow: 0px 1px 1px black;
     color: #1a2c50;
-    font-weight: 900;
-    padding-top: 20px;
+    padding-top: 25px;
     font-family: 'Noto serif', serif;
-}
+  }
+ 
+  .main-txt span {
+    color: #1a2c50;
+    font-weight: 600;
+    font-family: 'Noto serif', serif;
+  }
 
-.main-txt span{
-    color: #1a2c50;
-    font-weight: 900;
-    font-family: 'Noto serif', serif;
-}
+  .col-md-4 {
+    flex: 0 0 33.33%; /* Each column takes up one-third of the container width */
+    max-width: 33.33%; /* Set a maximum width for each column */
+    padding: 0 15px; /* Add some padding between columns */
+    box-sizing: border-box; /* Include padding and border in the width */
+  }
+   
+   
+  /* Your existing CSS */
+   
+  /* Add this CSS for the flipped state */
+  // .flip-card.flipped .flip-card-inner {
+  //   transform: rotateY(180deg);
+  // }
+   
+  .gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the height of the container to full viewport height */
+  }
  
   @keyframes planeLeftToRight {
     0% {
@@ -90,5 +108,120 @@
  
   .plane-icon {
     font-size: 28px; /* Increased size */
-    color: #ffa500; /* Adjust color as needed */
+    color: #005665; /* Adjust color as needed */
   }
+ 
+  // .flip-card {
+  //   background-color: transparent;
+  //   width: 190px;
+  //   height: 254px;
+  //   perspective: 1000px;
+  //   font-family: sans-serif;
+  // }
+ 
+  .flip-card {
+    background-color: transparent;
+    width: 190px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: sans-serif;
+    border-radius: 10px; /* Add rounded borders */
+    padding: 7px;
+  }
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+ 
+  // .flip-card-inner {
+  //   position: relative;
+  //   width: 100%;
+  //   height: 100%;
+  //   text-align: center;
+  //   transition: transform 0.8s;
+  //   transform-style: preserve-3d;
+  // }
+ 
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 10px; /* Add rounded borders */
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+ 
+  // .flip-card-front, .flip-card-back {
+  //   box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  //   position: absolute;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   width: 100%;
+  //   height: 100%;
+  //   -webkit-backface-visibility: hidden;
+  //   backface-visibility: hidden;
+  //   border: 1.5px solid #2f8594;
+  //  // border-radius: 1rem;
+  // }
+ 
+  .flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px; /* Add rounded borders */
+    font-family: 'Noto serif', serif;
+    font-size: small;
+    // padding:1px;
+  }
+ 
+  .flip-card-front {
+    background: linear-gradient(120deg, #2f8594 60%, rgb(255, 231, 222) 88%,
+    #2f8594 40%, #0b3840 48%);
+    color: #2f8594;
+  }
+ 
+  .flip-card-back {
+    background: linear-gradient(120deg, #82e6f7 30%, #2f8594 88%,
+    #b1effa 0%, #9feffd 78%);
+    color: black;
+    transform: rotateY(180deg);
+  }
+ 
+ 
+  /* Style for the row */
+.row {
+  display: flex; /* Use flexbox to arrange cards horizontally */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  margin-top: 30px; /* Add margin at the top */
+}
+ 
+/* Style for the columns */
+
+ 
+/* Your existing CSS */
+/* Add this CSS for the flipped state */
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+ 
+ 
+ 
+.flip-card img {
+  width: 100%; /* Ensure the image takes up the entire space of the card */
+  height: 100%; /* Ensure the image takes up the entire space of the card */
+  object-fit: cover; /* Make the image exactly fit into the card */
+  border-radius: 10px; /* Add rounded borders */
+}

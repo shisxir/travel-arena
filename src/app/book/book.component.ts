@@ -2,34 +2,50 @@ import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { SharedBookPayService } from '../shared-book-pay.service';
+import { LocalStorageService } from '../local-storage.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
-  styleUrl: './book.component.scss'
+  styleUrl: './book.component.scss',
 })
 export class BookComponent implements OnInit {
   minDate = new Date();
+  currentDate: string;
+  //for query params
+  selectedPackage!: string;
 
   form: FormGroup = new FormGroup({
-    firstname: new FormControl(''),
-    lastname: new FormControl(''),
+    fullname: new FormControl(''),
+    email: new FormControl(''),
     date: new FormControl(''),
     noOfDays: new FormControl(''),
     noOfGuests: new FormControl(''),
     extra: new FormControl(''),
+    package: new FormControl({value:'', disabled:true})
   });
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private sharedBookPayService: SharedBookPayService) {}
-
+  constructor(private formBuilder: FormBuilder, private router: Router,
+     private localStorageService: LocalStorageService,
+     private route: ActivatedRoute) {
+    this.currentDate = this.getCurrentDate();
+  }
+    getCurrentDate() {
+    const today = new Date();
+    return today.toISOString().split('T')[0];
+  }
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      this.selectedPackage = params['package'];
+    });
     this.form = this.formBuilder.group(
       {
-        firstname: ['', Validators.required],
-        lastname: [
-          '',Validators.required
+        fullname: ['', [Validators.required,Validators.pattern('[a-zA-Z ]*')]],
+        email: [
+          '',[Validators.required, Validators.email]
         ],
         date: ['', Validators.required],
         noOfDays: [
@@ -40,9 +56,13 @@ export class BookComponent implements OnInit {
           ]
         ],
         noOfGuests: ['', Validators.required],
-        extra: ['', Validators.required]
+        extra: [''],
+        package: [this.selectedPackage]
       },
     );
+    // this.route.queryParams.subscribe(params => {
+    //   this.selectedPackage = params['package'];
+    // });
   }
   get f(): { [key: string]: AbstractControl } {
     return this.form.controls;
@@ -53,10 +73,14 @@ export class BookComponent implements OnInit {
     if (this.form.invalid) {
       return;
     }
-    console.log(JSON.stringify(this.form.value, null, 2));
-    this.sharedBookPayService.buttonClicked();
+    const formData = this.form.value;
+    const userId = this.localStorageService.saveFormData(formData);
+    this.onReset();
+    // alert('Form data saved with user ID:'+userId);
+    // this.router.navigate(['/payment']);
+    this.router.navigate(['/payment'], { queryParams: { userId: userId } });
   }
-  onReset(): void {
+  onReset(): void { 
     this.submitted = false;
     this.form.reset();
   }

@@ -18,6 +18,7 @@ import { BookingComponent } from './booking/booking.component';
 import { PaymentPageComponent } from './payment-page/payment-page.component';
 
 import { ReviewsComponent } from './reviews/reviews.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +34,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
     FooterComponent,
     SearchComponent,
     BookingComponent,
-    PaymentPageComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,

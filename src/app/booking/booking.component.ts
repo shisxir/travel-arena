@@ -22,7 +22,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
+ 
 @Component({
   selector: 'app-booking',
   templateUrl: './booking.component.html',
@@ -30,9 +30,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BookingComponent implements OnInit {
   selectedPackage!: string;
-
+ 
   constructor(private route: ActivatedRoute) { }
-
+ 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       this.selectedPackage = params['package'];
