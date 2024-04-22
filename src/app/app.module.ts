@@ -34,6 +34,7 @@ import { CardPaymentDialogComponent } from './card-payment-dialog/card-payment-d
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ProfileComponent } from './profile/profile.component';
 // import { MatDialog } from '@angular/material/dialog';
 // import Razorpay from '../../node_modules/razorpay';
 
@@ -65,6 +66,7 @@ import { RegisterComponent } from './register/register.component';
     CareersComponent,
     LoginComponent,
     RegisterComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

@@ -51,4 +51,14 @@ export class AuthService {
   isLoggedIn(): boolean {
     return localStorage.getItem(this.userKey) !== null;
   }
+  getLoggedInUser(): any {
+    return JSON.parse(localStorage.getItem(this.userKey) || '{}');
+  }
+  getFirstName(): string {
+    const user = this.getLoggedInUser();
+    if (user && user.fullName) {
+      return user.fullName.split(' ')[0]; // Return the first word
+    }
+    return '';
+  }
 }

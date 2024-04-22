@@ -1,9 +1,61 @@
-<div>
+<!-- <div>
     <h2>Register</h2>
     <input type="text" placeholder="Full Name" [(ngModel)]="fullName" (ngModelChange)="checkForm()" />
     <input type="email" placeholder="Email Address" [(ngModel)]="email" (ngModelChange)="checkForm()" />
     <input type="date" placeholder="Date of Birth" [(ngModel)]="dob" (ngModelChange)="checkForm()" />
     <input type="password" placeholder="Password" [(ngModel)]="password" (ngModelChange)="checkForm()" />
     <button (click)="register()" [disabled]="!formValid">Submit</button>
-  </div>
-  
+</div> -->
+<!-- register.component.html -->
+<div class="register-container">
+  <h2>Register</h2>
+  <form (ngSubmit)="register()">
+    <div class="form-group">
+      <label for="fullName">Full Name:</label>
+      <input
+        type="text"
+        id="fullName"
+        [(ngModel)]="fullName"
+        name="fullName"
+        (ngModelChange)="checkForm()"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        [(ngModel)]="email"
+        (ngModelChange)="checkForm()"
+        name="email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="dob">Date of Birth:</label>
+      <input
+        type="date"
+        id="dob"
+        [(ngModel)]="dob"
+        (ngModelChange)="checkForm()"
+        name="dob"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="password"
+        (ngModelChange)="checkForm()"
+        name="password"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <button type="submit" [disabled]="!formValid">Submit</button>
+    </div>
+  </form>
+</div>

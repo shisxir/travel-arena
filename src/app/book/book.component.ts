@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { LocalStorageService } from '../local-storage.service';
 import { ActivatedRoute } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 
 @Component({
@@ -30,7 +31,8 @@ export class BookComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private router: Router,
     private localStorageService: LocalStorageService,
-    private route: ActivatedRoute) {
+    private route: ActivatedRoute,
+    private authService: AuthService) {
     this.currentDate = this.getCurrentDate();
   }
   getCurrentDate() {
@@ -63,6 +65,18 @@ export class BookComponent implements OnInit {
     // this.route.queryParams.subscribe(params => {
     //   this.selectedPackage = params['package'];
     // });
+
+    //to fetch name and email address from loggedin user 
+    const user = this.authService.getLoggedInUser();
+    if(user){
+      this.form.patchValue({
+        fullname: user.fullName || '',
+        email: user.email || ''
+      });
+    }
+
+
+    ///////////////////
     const storedData=localStorage.getItem('formData');
     if(storedData){
       const data=JSON.parse(storedData);

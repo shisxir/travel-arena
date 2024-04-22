@@ -22,12 +22,14 @@ import { BlogComponent } from './blog/blog.component';
 import { PaymentPageComponent } from './payment-page/payment-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ProfileComponent } from './profile/profile.component';
 const routes: Routes = [
   { path: '', component: HomepageComponent},
   { path: 'navbar', component: NavbarComponent},
   { path: 'home-section', component: HomeSectionComponent},
   {path:'login',  component:LoginComponent },
   {path:'register', component:RegisterComponent},
+  { path: 'profile', component: ProfileComponent },
   { path: 'book', component: BookComponent},
   { path: 'packages', component: PackagesComponent},
   { path: 'gallery', component: GalleryComponent},

@@ -1,11 +1,15 @@
-/* login.component.css */
-.login-container {
+/* profile.component.css */
+.profile-container {
     max-width: 400px;
     margin: auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-info {
+    margin-bottom: 20px;
   }
   
   .form-group {
@@ -30,18 +34,5 @@
   
   button:hover {
     background-color: #45a049;
-  }
-  
-  .register-link {
-    text-align: center;
-  }
-  
-  .register-link a {
-    color: #4CAF50;
-    text-decoration: none;
-  }
-  
-  .register-link a:hover {
-    text-decoration: underline;
   }
   

@@ -10,6 +10,7 @@ import { AuthService } from '../auth.service';
 export class NavbarComponent implements OnInit {
   activeLink: string = '';
   isNavbarCollapsed: boolean = true;
+  dropdownOpen: boolean = false; // To control the dropdown state 
   ngOnInit(): void {
     this.isNavbarCollapsed = false;;
   }
@@ -25,13 +26,30 @@ export class NavbarComponent implements OnInit {
     return this.authService.isLoggedIn();
   }
   loginOrLogout(): void {
-    if (this.isLoggedIn) {
-      this.authService.logout();
-      alert('Successfully Logged Out');
-    } else {
-      console.log('working');
-      this.router.navigate(['/login']);
-    }
+    this.router.navigate(['/login']);
+  }
+  //dropdown for logged in user 
+  // getUserName(): string {
+  //   const user = this.authService.getLoggedInUser();
+  //   return user ? user.fullName : '';
+  // }
+  getUserName(): string {
+    return this.authService.getFirstName(); // Return the first name
+  }
+
+  toggleDropdown(): void {
+    this.dropdownOpen = !this.dropdownOpen; // Toggle the dropdown state
+  }
+
+  goToProfile(): void {
+    this.router.navigate(['/profile']);
+    this.dropdownOpen = false; // Close the dropdown
+  }
+  logout(): void {
+    this.authService.logout();
+    alert('Successfully Logged Out');
+    this.router.navigate(['/']);
+    this.dropdownOpen = false; // Close the dropdown
   }
   //////////////////////////////////////////////////////
   toggleNavbar() {

@@ -1,0 +1,38 @@
+<!-- <div>
+    <h2>Profile</h2>
+    <p>Full Name: {{ fullName }}</p>
+    <p>Email: {{ email }}</p>
+    <p>Date of Birth: {{ dob }}</p>
+  
+    <h3>Change Password</h3>
+    <input type="password" placeholder="New Password" [(ngModel)]="newPassword" />
+    <button (click)="changePassword()" [disabled]="!newPassword.trim()">Submit</button>
+</div> -->
+<!-- profile.component.html -->
+<div class="profile-container">
+    <h2>Profile</h2>
+    <div class="profile-info">
+      <p><strong>Full Name:</strong> {{ fullName }}</p>
+      <p><strong>Email:</strong> {{ email }}</p>
+      <p><strong>Date of Birth:</strong> {{ dob }}</p>
+    </div>
+    <h3>Change Password</h3>
+    <div class="form-group">
+      <label for="newPassword">New Password:</label>
+      <input
+        type="password"
+        id="newPassword"
+        [(ngModel)]="newPassword"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <button
+        (click)="changePassword()"
+        [disabled]="newPassword.trim() === ''"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+  

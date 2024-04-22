@@ -23,9 +23,23 @@
             <a class="nav-link" routerLink="/about" [class.active]="isAboutPage()" (click)="closeNavbar()">About</a>
           </li>
           <li class="nav-item">
-            <button (click)="loginOrLogout()">
+            <!-- <button (click)="loginOrLogout()">
               {{ isLoggedIn ? 'Logout' : 'Login' }}
-            </button>
+            </button> -->
+            <div *ngIf="isLoggedIn; else loginButton">
+              <div class="dropdown">
+                <button class="dropdown-toggle" (click)="toggleDropdown()">
+                  {{ getUserName() }}
+                </button>
+                <div class="dropdown-content" *ngIf="dropdownOpen">
+                  <button (click)="goToProfile()">Profile</button>
+                  <button (click)="logout()">Logout</button>
+                </div>
+              </div>
+            </div>
+            <ng-template #loginButton>
+              <button (click)="loginOrLogout()">Login</button>
+            </ng-template>
           </li>
         </ul>
       </div>
