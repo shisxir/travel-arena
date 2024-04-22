@@ -1,0 +1,42 @@
+/* careers.component.css */
+
+.careers-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.careers-box {
+    width: 100%; /* Adjust the width as needed */
+    height: 100%; /* Adjust the height as needed */
+    padding: 20px; /* Add padding for better readability */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow for depth */
+    background-color: #e7f0f2; /* Solid background color */
+}
+
+.careers-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Noto serif', serif;
+}
+
+.careers-content {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+}
+
+.careers-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+.careers-link:hover {
+    text-decoration: underline;
+}

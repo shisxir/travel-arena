@@ -1,0 +1,11 @@
+<!-- faqs.component.html -->
+
+<div class="faqs">
+    <h1>Frequently Asked Questions</h1>
+  
+    <div class="faq-item" *ngFor="let faq of faqList; let i = index" (click)="toggleAnswer(i)">
+      <h3>{{ faq.question }}</h3>
+      <p *ngIf="faq.isOpen">{{ faq.answer }}</p>
+    </div>
+  </div>
+  

@@ -20,6 +20,11 @@ import { PaymentPageComponent } from './payment-page/payment-page.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { PaymentComponent } from './payment/payment.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FaqsComponent } from './faqs/faqs.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
+import { HelpCenterComponent } from './help-center/help-center.component';
+import { CareersComponent } from './careers/careers.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +42,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BookingComponent,
     ReviewsComponent,
     PaymentComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FaqsComponent,
+    PrivacyPolicyComponent,
+    CookiePolicyComponent,
+    HelpCenterComponent,
+    CareersComponent
   ],
   imports: [
     BrowserModule,
