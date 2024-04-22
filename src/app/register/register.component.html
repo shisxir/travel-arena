@@ -1,0 +1,9 @@
+<div>
+    <h2>Register</h2>
+    <input type="text" placeholder="Full Name" [(ngModel)]="fullName" (ngModelChange)="checkForm()" />
+    <input type="email" placeholder="Email Address" [(ngModel)]="email" (ngModelChange)="checkForm()" />
+    <input type="date" placeholder="Date of Birth" [(ngModel)]="dob" (ngModelChange)="checkForm()" />
+    <input type="password" placeholder="Password" [(ngModel)]="password" (ngModelChange)="checkForm()" />
+    <button (click)="register()" [disabled]="!formValid">Submit</button>
+  </div>
+  

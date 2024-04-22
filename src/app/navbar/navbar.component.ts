@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,14 +13,27 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.isNavbarCollapsed = false;;
   }
-  constructor(private router: Router) { }
+  constructor(private authService: AuthService,private router: Router) { }
   @HostListener('document:click', ['$event'])
   clickout(event: Event) {
     if (!(event.target as HTMLElement).closest('.navbar-collapse')) {
       this.closeNavbar();
     }
   }
-
+  //login
+  get isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
+  }
+  loginOrLogout(): void {
+    if (this.isLoggedIn) {
+      this.authService.logout();
+      alert('Successfully Logged Out');
+    } else {
+      console.log('working');
+      this.router.navigate(['/login']);
+    }
+  }
+  //////////////////////////////////////////////////////
   toggleNavbar() {
     if (this.isNavbarCollapsed) {
       this.isNavbarCollapsed = false;

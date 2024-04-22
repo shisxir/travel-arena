@@ -20,10 +20,14 @@ import { CareersComponent } from './careers/careers.component';
 import { PressComponent } from './press/press.component';
 import { BlogComponent } from './blog/blog.component';
 import { PaymentPageComponent } from './payment-page/payment-page.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 const routes: Routes = [
   { path: '', component: HomepageComponent},
   { path: 'navbar', component: NavbarComponent},
   { path: 'home-section', component: HomeSectionComponent},
+  {path:'login',  component:LoginComponent },
+  {path:'register', component:RegisterComponent},
   { path: 'book', component: BookComponent},
   { path: 'packages', component: PackagesComponent},
   { path: 'gallery', component: GalleryComponent},
@@ -40,11 +44,7 @@ const routes: Routes = [
   { path: 'press', component: PressComponent},
   { path: 'blog', component: BlogComponent},
   { path:'checkout/:paymentOrderId', component:PaymentPageComponent},
-  { path:'**', component:PageNotFoundComponent}
-  
-  // { path: 'login', component: LoginComponent },
-  // {path:'',component:HomepageComponent}
-
+  { path:'**', component:PageNotFoundComponent},
 ];
 
 @NgModule({

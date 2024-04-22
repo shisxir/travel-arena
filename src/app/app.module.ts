@@ -32,6 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { UpiPaymentDialogComponent } from './upi-payment-dialog/upi-payment-dialog.component';
 import { CardPaymentDialogComponent } from './card-payment-dialog/card-payment-dialog.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 // import { MatDialog } from '@angular/material/dialog';
 // import Razorpay from '../../node_modules/razorpay';
 
@@ -60,7 +62,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     PrivacyPolicyComponent,
     CookiePolicyComponent,
     HelpCenterComponent,
-    CareersComponent
+    CareersComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
