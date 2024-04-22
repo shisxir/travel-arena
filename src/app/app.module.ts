@@ -28,6 +28,14 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 import { HelpCenterComponent } from './help-center/help-center.component';
 import { CareersComponent } from './careers/careers.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UpiPaymentDialogComponent } from './upi-payment-dialog/upi-payment-dialog.component';
+import { CardPaymentDialogComponent } from './card-payment-dialog/card-payment-dialog.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+// import { MatDialog } from '@angular/material/dialog';
+// import Razorpay from '../../node_modules/razorpay';
 
 @NgModule({
   declarations: [
@@ -46,6 +54,9 @@ import { CareersComponent } from './careers/careers.component';
     ReviewsComponent,
     PaymentComponent,
     PageNotFoundComponent,
+    UpiPaymentDialogComponent,
+    CardPaymentDialogComponent,
+    PaymentPageComponent,
     ContactResponseComponent,
     FaqsComponent,
     PrivacyPolicyComponent,
@@ -58,10 +69,15 @@ import { CareersComponent } from './careers/careers.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
+    MatDialogModule,
+    MatSnackBarModule
+    // Razorpay,
     MatDialogModule
   ],
   providers: [
     provideClientHydration(),
+    provideAnimationsAsync(),
     provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]

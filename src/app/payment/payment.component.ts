@@ -3,6 +3,11 @@ import { Router } from '@angular/router';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from '../local-storage.service';
+import { SharedBookPayService } from '../shared-book-pay.service';
+import { MatDialog } from '@angular/material/dialog';
+import { UpiPaymentDialogComponent } from '../upi-payment-dialog/upi-payment-dialog.component';
+import { CardPaymentDialogComponent } from '../card-payment-dialog/card-payment-dialog.component';
+
 
 @Component({
   selector: 'app-payment',
@@ -20,10 +25,14 @@ export class PaymentComponent implements OnInit {
   paymentForm!: FormGroup;
   finalPrice: number = 13999;
   finalTotalPrice: number = 13999;
+  amount: number=0;
+  selectedPaymentMethod!:string;
 
   constructor(private formBuilder: FormBuilder, private router: Router,
     private route: ActivatedRoute,
-    private localStorageService: LocalStorageService) { }
+    private localStorageService: LocalStorageService,
+    private sharedBookPayService: SharedBookPayService,
+    private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
@@ -47,9 +56,49 @@ export class PaymentComponent implements OnInit {
     //   return;
     // }
     // Submit the form
-    alert("Success!");
-    this.router.navigate(['./']);
+    // alert("Success!");
+    // this.router.navigate(['./']);
+    
+    // this.sharedBookPayService.createOrder(this.amount).subscribe((response: any) => {
+    //   if (response.status == 200) {
+    //     const paymentOrderId = response.data.id;
+    //     console.log(paymentOrderId)
+    //     // this.productService.setSelectedProductForCheckout(product)
+    //     this.router.navigateByUrl(`/checkout/${paymentOrderId}`);
+    //   } else {
+    //     alert('server side error cant process order');
+    //   }
+    // });
+
+    if (this.selectedPaymentMethod === 'UPI') {
+      this.openUpiPaymentDialog();
+    } else if (this.selectedPaymentMethod === 'CARD') {
+      this.openCardPaymentDialog();
+    }
   }
+
+  openUpiPaymentDialog(): void {
+    const dialogRef = this.dialog.open(UpiPaymentDialogComponent, {
+      width: '400px',
+      // Add other dialog options if needed
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The UPI Payment dialog was closed');
+    });
+  }
+
+  openCardPaymentDialog(): void {
+    const dialogRef = this.dialog.open(CardPaymentDialogComponent, {
+      width: '400px',
+      // Add other dialog options if needed
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The Card Payment dialog was closed');
+    });
+  }
+
   //will checkPrice
   checkPrice() {
     if (this.package === 'Ladakh') {
@@ -106,7 +155,8 @@ export class PaymentComponent implements OnInit {
     return 18*this.checkAllPrice()/100;
   }
   netPay(){
-    return this.checkGST()+this.checkAllPrice();
+    this.amount=this.checkGST()+this.checkAllPrice();
+    return this.amount;
   }
   checkImage(){
     if (this.package === 'Ladakh') {

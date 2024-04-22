@@ -19,6 +19,7 @@ import { HelpCenterComponent } from './help-center/help-center.component';
 import { CareersComponent } from './careers/careers.component';
 import { PressComponent } from './press/press.component';
 import { BlogComponent } from './blog/blog.component';
+import { PaymentPageComponent } from './payment-page/payment-page.component';
 const routes: Routes = [
   { path: '', component: HomepageComponent},
   { path: 'navbar', component: NavbarComponent},
@@ -38,7 +39,9 @@ const routes: Routes = [
   { path: 'careers', component: CareersComponent},
   { path: 'press', component: PressComponent},
   { path: 'blog', component: BlogComponent},
+  { path:'checkout/:paymentOrderId', component:PaymentPageComponent},
   { path:'**', component:PageNotFoundComponent}
+  
   // { path: 'login', component: LoginComponent },
   // {path:'',component:HomepageComponent}
 
