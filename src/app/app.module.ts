@@ -23,6 +23,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ContactResponseComponent } from './contact-response/contact-response.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FaqsComponent } from './faqs/faqs.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
+import { HelpCenterComponent } from './help-center/help-center.component';
+import { CareersComponent } from './careers/careers.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +46,12 @@ import { MatDialogModule } from '@angular/material/dialog';
     ReviewsComponent,
     PaymentComponent,
     PageNotFoundComponent,
-    ContactResponseComponent
+    ContactResponseComponent,
+    FaqsComponent,
+    PrivacyPolicyComponent,
+    CookiePolicyComponent,
+    HelpCenterComponent,
+    CareersComponent
   ],
   imports: [
     BrowserModule,
