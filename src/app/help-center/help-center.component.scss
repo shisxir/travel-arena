@@ -1,4 +1,6 @@
 /* help-center.component.css */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@400;500;600&display=swap");
+
 
 .help-center-container {
     width: 100%;
@@ -15,4 +17,16 @@
     border-radius: 10px; /* Rounded corners for a modern look */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow for depth */
     background-color: #e7f0f2; /* Solid background color */
+}
+
+.help-center-box .h1{
+    font-family: 'Noto serif', serif;
+}
+
+.help-center-box .h2{
+    font-family: 'Noto serif', serif;
+}
+
+.help-center-box .p{
+    font-family: "Poppins", sans-serif;
 }

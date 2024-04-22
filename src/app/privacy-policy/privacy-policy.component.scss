@@ -1,5 +1,8 @@
 /* privacy-policy.component.css */
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@400;500;600&display=swap");
+
+
 .privacy-policy {
     font-family: Arial, sans-serif;
     text-align: left; /* Align content to the left */
@@ -13,17 +16,20 @@
   .privacy-policy h1 {
     font-size: 24px;
     margin-bottom: 20px;
+    font-family: 'Noto serif', serif;
   }
   
   .privacy-policy h2 {
     font-size: 20px;
     margin-top: 30px;
     margin-bottom: 10px;
+    font-family: 'Noto serif', serif;
   }
   
   .privacy-policy p {
     font-size: 16px;
     line-height: 1.5;
+    font-family: "Poppins", sans-serif;
   }
   
   /* Set full screen width */
