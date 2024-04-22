@@ -12,6 +12,13 @@ import { FooterComponent } from './footer/footer.component';
 import { BookingComponent } from './booking/booking.component';
 import { PaymentComponent } from './payment/payment.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FaqsComponent } from './faqs/faqs.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
+import { HelpCenterComponent } from './help-center/help-center.component';
+import { CareersComponent } from './careers/careers.component';
+import { PressComponent } from './press/press.component';
+import { BlogComponent } from './blog/blog.component';
 import { PaymentPageComponent } from './payment-page/payment-page.component';
 const routes: Routes = [
   { path: '', component: HomepageComponent},
@@ -25,6 +32,13 @@ const routes: Routes = [
   { path: 'booking/:selectedDestination', component:BookingComponent},
   { path: 'booking', component:BookingComponent},
   {path: 'payment', component:PaymentComponent},
+  { path: 'faqs', component: FaqsComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'cookie-policy', component: CookiePolicyComponent},
+  { path: 'help-center', component: HelpCenterComponent},
+  { path: 'careers', component: CareersComponent},
+  { path: 'press', component: PressComponent},
+  { path: 'blog', component: BlogComponent},
   { path:'checkout/:paymentOrderId', component:PaymentPageComponent},
   { path:'**', component:PageNotFoundComponent}
   

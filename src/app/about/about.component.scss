@@ -75,6 +75,13 @@
 // .hidden-text.show{
 //     max-height: 1000px;
 // }
+// .bdrop{
+//     backdrop-filter: blur(4px);
+// }
+
+.row{
+    margin-top: 0;
+}
 
 * {
     margin: 0;
@@ -97,13 +104,14 @@ body {
 .container {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 80%;
     justify-content: center;
     align-items: center;
+    margin-top: 0;
 }
  
 .inner-container {
-    margin-top: 70px;
+    margin-top: 40px;
     // margin-left: 30px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8);

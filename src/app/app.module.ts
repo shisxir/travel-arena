@@ -20,6 +20,14 @@ import { PaymentPageComponent } from './payment-page/payment-page.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { PaymentComponent } from './payment/payment.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ContactResponseComponent } from './contact-response/contact-response.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FaqsComponent } from './faqs/faqs.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
+import { HelpCenterComponent } from './help-center/help-center.component';
+import { CareersComponent } from './careers/careers.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UpiPaymentDialogComponent } from './upi-payment-dialog/upi-payment-dialog.component';
 import { CardPaymentDialogComponent } from './card-payment-dialog/card-payment-dialog.component';
@@ -48,7 +56,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     PageNotFoundComponent,
     UpiPaymentDialogComponent,
     CardPaymentDialogComponent,
-    PaymentPageComponent
+    PaymentPageComponent,
+    ContactResponseComponent,
+    FaqsComponent,
+    PrivacyPolicyComponent,
+    CookiePolicyComponent,
+    HelpCenterComponent,
+    CareersComponent
   ],
   imports: [
     BrowserModule,
@@ -58,10 +72,12 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     HttpClientModule,
     MatDialogModule,
     MatSnackBarModule
-    // Razorpay
+    // Razorpay,
+    MatDialogModule
   ],
   providers: [
     provideClientHydration(),
+    provideAnimationsAsync(),
     provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]

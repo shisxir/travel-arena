@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { ContactResponseComponent } from '../contact-response/contact-response.component';
 
 @Component({
   selector: 'app-about',
@@ -21,8 +23,8 @@ export class AboutComponent implements OnInit {
     phone: ['', [Validators.required, Validators.pattern('[0-9]{10}')]],
     message: ['', Validators.required]}) // Add definite assignment assertion
     submitted:boolean=false;
-
-  constructor(private formBuilder: FormBuilder) { }
+    dialogRef: MatDialogRef<ContactResponseComponent>|undefined;
+  constructor(private formBuilder: FormBuilder, private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -33,6 +35,14 @@ export class AboutComponent implements OnInit {
       return;
     }
     // Handle form submission
+    // this.formBuilder;
+    this.dialogRef=this.dialog.open(ContactResponseComponent,{ backdropClass:"blur-backdrop"});
+    if(this.dialogRef){
+      this.dialogRef.afterClosed().subscribe( () => {
+        this.contactForm.reset();
+        this.submitted=false;
+      })
+    }
   }
 
 
