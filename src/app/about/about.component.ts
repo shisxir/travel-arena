@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { ContactResponseComponent } from '../contact-response/contact-response.component';
 
 @Component({
   selector: 'app-about',
@@ -22,7 +24,7 @@ export class AboutComponent implements OnInit {
     message: ['', Validators.required]}) // Add definite assignment assertion
     submitted:boolean=false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -33,6 +35,7 @@ export class AboutComponent implements OnInit {
       return;
     }
     // Handle form submission
+    this.dialog.open(ContactResponseComponent,{ backdropClass:"blur-backdrop"})
   }
 
 

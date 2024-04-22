@@ -20,6 +20,9 @@ import { PaymentPageComponent } from './payment-page/payment-page.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { PaymentComponent } from './payment/payment.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ContactResponseComponent } from './contact-response/contact-response.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatDialogModule } from '@angular/material/dialog';
 import { FaqsComponent } from './faqs/faqs.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
@@ -43,6 +46,7 @@ import { CareersComponent } from './careers/careers.component';
     ReviewsComponent,
     PaymentComponent,
     PageNotFoundComponent,
+    ContactResponseComponent,
     FaqsComponent,
     PrivacyPolicyComponent,
     CookiePolicyComponent,
@@ -53,10 +57,12 @@ import { CareersComponent } from './careers/careers.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

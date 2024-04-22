@@ -72,10 +72,9 @@ export class BookComponent implements OnInit {
         noOfDays: data.duration || '',
         noOfGuests: data.guests || ''
         });
-        
-
       }
     }
+    localStorage.removeItem('formData');
 
   }
   get f(): { [key: string]: AbstractControl } {
