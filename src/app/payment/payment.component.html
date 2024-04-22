@@ -25,13 +25,13 @@
             Payment Method
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="CARD" [(ngModel)]="selectedPaymentMethod">
               <label class="form-check-label" for="flexRadioDefault1">
                 CARD
               </label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked value="UPI" [(ngModel)]="selectedPaymentMethod">
               <label class="form-check-label" for="flexRadioDefault2">
                 UPI
               </label>

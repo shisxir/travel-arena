@@ -20,6 +20,14 @@ import { PaymentPageComponent } from './payment-page/payment-page.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { PaymentComponent } from './payment/payment.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UpiPaymentDialogComponent } from './upi-payment-dialog/upi-payment-dialog.component';
+import { CardPaymentDialogComponent } from './card-payment-dialog/card-payment-dialog.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+// import { MatDialog } from '@angular/material/dialog';
+// import Razorpay from '../../node_modules/razorpay';
 
 @NgModule({
   declarations: [
@@ -37,16 +45,24 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BookingComponent,
     ReviewsComponent,
     PaymentComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    UpiPaymentDialogComponent,
+    CardPaymentDialogComponent,
+    PaymentPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    MatDialogModule,
+    MatSnackBarModule
+    // Razorpay
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
