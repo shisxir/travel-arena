@@ -31,8 +31,6 @@ import { CareersComponent } from './careers/careers.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UpiPaymentDialogComponent } from './upi-payment-dialog/upi-payment-dialog.component';
 import { CardPaymentDialogComponent } from './card-payment-dialog/card-payment-dialog.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 // import { MatDialog } from '@angular/material/dialog';
 // import Razorpay from '../../node_modules/razorpay';
@@ -73,7 +71,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatDialogModule,
     MatSnackBarModule
     // Razorpay,
-    MatDialogModule
   ],
   providers: [
     provideClientHydration(),
