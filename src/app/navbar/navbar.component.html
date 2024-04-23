@@ -39,7 +39,7 @@
             </div>
           </div>
           <ng-template #loginButton>
-            <a class="nav-link" (click)="loginOrLogout()">
+            <a class="nav-link" [class.active]="isLoginPage()"  (click)="loginOrLogout()">
               Login
             </a>
           </ng-template>

@@ -20,7 +20,7 @@ export class AboutComponent implements OnInit {
   contactForm: FormGroup = this.formBuilder.group({
     name: ['', [Validators.required, Validators.pattern('[a-zA-Z]*')]],
     email: ['', [Validators.required, Validators.email]],
-    phone: ['', [Validators.required, Validators.pattern('[0-9]{10}')]],
+    phone: ['', [Validators.required, Validators.pattern('[789][0-9]{9}')]],
     message: ['', Validators.required]}) // Add definite assignment assertion
     submitted:boolean=false;
     dialogRef: MatDialogRef<ContactResponseComponent>|undefined;

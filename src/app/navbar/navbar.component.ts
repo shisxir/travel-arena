@@ -85,4 +85,7 @@ export class NavbarComponent implements OnInit {
   isAboutPage(): boolean {
     return this.router.url === '/about';
   }
+  isLoginPage(): boolean {
+    return this.router.url === '/login';
+  }
 }
