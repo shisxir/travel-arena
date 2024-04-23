@@ -1,49 +1,55 @@
 <nav class="navbar navbar-expand-lg" id="navbar">
-    <div class="container">
-      <a class="navbar-brand" href="index.html" id="logo">Voyager</a>
-      <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
-        <span *ngIf="isNavbarCollapsed"><i class="bi bi-justify"></i></span>
-        <span *ngIf="!isNavbarCollapsed"><i class="bi bi-x"></i></span>
-      </button>
-      <div class="collapse navbar-collapse" [ngClass]="{'show': !isNavbarCollapsed}" id="mynavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html" [class.active]="isHomePage()">Home</a>
-          </li>
-          <li class="nav-item" [class.active]="isPackagesPage()">
-            <a class="nav-link" routerLink="/packages" (click)="closeNavbar()">Packages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services" (click)="closeNavbar()">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#gallery" (click)="closeNavbar()">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/about" [class.active]="isAboutPage()" (click)="closeNavbar()">About</a>
-          </li>
-          <li class="nav-item">
-            <!-- <button (click)="loginOrLogout()">
-              {{ isLoggedIn ? 'Logout' : 'Login' }}
-            </button> -->
-            <div *ngIf="isLoggedIn; else loginButton">
-              <div class="dropdown">
-                <button class="dropdown-toggle" (click)="toggleDropdown()">
-                  {{ getUserName() }}
-                </button>
-                <div class="dropdown-content" *ngIf="dropdownOpen">
-                  <button (click)="goToProfile()">Profile</button>
-                  <button (click)="logout()">Logout</button>
-                </div>
+  <div class="container">
+    <a class="navbar-brand" href="index.html" id="logo">Voyager</a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+      <span *ngIf="isNavbarCollapsed"><i class="bi bi-justify"></i></span>
+      <span *ngIf="!isNavbarCollapsed"><i class="bi bi-x"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="{'show': !isNavbarCollapsed}" id="mynavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html" [class.active]="isHomePage()">Home</a>
+        </li>
+        <li class="nav-item" [class.active]="isPackagesPage()">
+          <a class="nav-link" routerLink="/packages" (click)="closeNavbar()">Packages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services" (click)="closeNavbar()">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#gallery" (click)="closeNavbar()">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" [class.active]="isAboutPage()" (click)="closeNavbar()">About</a>
+        </li>
+        <li class="nav-item">
+          <div *ngIf="isLoggedIn; else loginButton">
+            <div class="dropdown">
+              <a class="nav-link" (click)="toggleDropdown()">
+                <!-- <button class="dropdown-toggle" (click)="toggleDropdown()"> -->
+                  <!-- {{ getUserName() }} ▼ -->
+                  @if(dropdownOpen){
+                    {{ getUserName() }} ▲
+                  }@else {
+                    {{ getUserName() }} ▼
+                  }
+                <!-- </button> -->
+              </a>
+              <div class="dropdown-content" *ngIf="dropdownOpen">
+                <button (click)="goToProfile()">Profile</button>
+                <button (click)="logout()">Logout</button>
               </div>
             </div>
-            <ng-template #loginButton>
-              <button (click)="loginOrLogout()">Login</button>
-            </ng-template>
-          </li>
-        </ul>
-      </div>
+          </div>
+          <ng-template #loginButton>
+            <a class="nav-link" (click)="loginOrLogout()">
+            <!-- <button (click)="loginOrLogout()"> -->
+              Login
+            <!-- </button> -->
+          </a>
+          </ng-template>
+        </li>
+      </ul>
     </div>
-  </nav>
-  
-  
+  </div>
+</nav>
