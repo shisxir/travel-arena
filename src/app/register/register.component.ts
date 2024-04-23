@@ -41,6 +41,7 @@ export class RegisterComponent {
       duration: 3000,
       horizontalPosition: 'center',
       verticalPosition: 'bottom',
+      panelClass: ['blue-snackbar']
     });
     this.router.navigate(['/login']);
   }

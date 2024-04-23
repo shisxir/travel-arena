@@ -38,6 +38,7 @@ export class ProfileComponent {
         duration: 3000,
         horizontalPosition: 'center',
         verticalPosition: 'bottom',
+        panelClass: ['blue-snackbar']
       });
       this.newPassword = '';// Clear the input
     }

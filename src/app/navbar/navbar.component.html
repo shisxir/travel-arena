@@ -26,14 +26,11 @@
           <div *ngIf="isLoggedIn; else loginButton">
             <div class="dropdown">
               <a class="nav-link" (click)="toggleDropdown()">
-                <!-- <button class="dropdown-toggle" (click)="toggleDropdown()"> -->
-                  <!-- {{ getUserName() }} ▼ -->
-                  @if(dropdownOpen){
-                    {{ getUserName() }} ▲
-                  }@else {
-                    {{ getUserName() }} ▼
-                  }
-                <!-- </button> -->
+                @if(dropdownOpen){
+                Hello, {{ getUserName() }} ▲
+                }@else {
+                Hello, {{ getUserName() }} ▼
+                }
               </a>
               <div class="dropdown-content" *ngIf="dropdownOpen">
                 <button (click)="goToProfile()">Profile</button>
@@ -43,10 +40,8 @@
           </div>
           <ng-template #loginButton>
             <a class="nav-link" (click)="loginOrLogout()">
-            <!-- <button (click)="loginOrLogout()"> -->
               Login
-            <!-- </button> -->
-          </a>
+            </a>
           </ng-template>
         </li>
       </ul>

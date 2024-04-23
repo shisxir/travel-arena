@@ -54,6 +54,7 @@ export class NavbarComponent implements OnInit {
       duration: 3000,
       horizontalPosition: 'center',
       verticalPosition: 'bottom',
+      panelClass: ['blue-snackbar']
     });
     this.router.navigate(['/']);
     this.dropdownOpen = false; // Close the dropdown

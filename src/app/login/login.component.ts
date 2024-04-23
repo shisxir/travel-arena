@@ -21,6 +21,7 @@ export class LoginComponent {
         duration: 3000,
         horizontalPosition: 'center',
         verticalPosition: 'bottom',
+        panelClass: ['blue-snackbar']
       });
       this.router.navigate(['/']); // Redirect to home
     } else {
@@ -29,6 +30,7 @@ export class LoginComponent {
         duration: 3000,
         horizontalPosition: 'center',
         verticalPosition: 'bottom',
+        panelClass: ['blue-snackbar']
       });
     }
   }
