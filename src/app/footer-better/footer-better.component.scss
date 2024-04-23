@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@400;500;600&display=swap");
+
+#footer {
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+    background: #4D3B36;
+}
+ 
+#footer h1 {
+    font-weight: 600;
+    padding-top: 5px;
+    text-shadow: 0px 0px 1px black;
+    font-family: 'Courgette', cursive;
+    color: rgb(255, 239, 231);
+}
+ 
+#footer h1 span {
+    color: rgb(255, 239, 231);
+    font-family: 'Noto serif', serif;
+}
+ 
+.social-links a {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    background: 4D3B36;
+    color: rgb(255, 239, 231);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+.social-links a:hover {
+    background: #F0AC19;
+}
+
+#footer p{
+    color: rgb(255, 239, 231);
+    // font-size: medium !important;
+}
+ 
+.credit {
+    margin-top: 15px;
+    // font-size: smaller !important;
+    color: rgb(255, 239, 231);
+}

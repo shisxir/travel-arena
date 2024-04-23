@@ -1,235 +1,15 @@
 // @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Jersey+10&family=Russo+One&display=swap');
-// @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@400;500;600&display=swap");
-// .gallery{
-//   background-color: #f4f7fe;
-// }
-// .overlay {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     opacity: 0;
-//     transition: opacity 0.3s;
-//   }
- 
-//   .card:hover .overlay {
-//     opacity: 1;
-//   }
- 
-//   .text {
-//     font-family: 'Fugaz One', sans-serif;
-//     font-style: normal;
-//     font-weight: 400;
-//     color: white; /* Light black/ash color */
-//     font-size: 25px;
-//     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-//   }
- 
-//   .gallery {
-//     margin-top: 0;
-//   }
- 
-//   .gallery .card {
-//     border-radius: 10px;
-//     box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
-//     cursor: pointer;
-//     overflow: hidden; /* Ensure image doesn't overflow the card */
-//     position: relative; /* Ensure overlay and text are positioned relative to the card */
-//   }
- 
-//   .gallery .card img {
-//     border-radius: 10px;
-//     transition: transform 0.5s;
-//   }
- 
-//   .gallery .card:hover img {
-//     transform: scale(1.1); /* Zoom-in effect on hover */
-//     filter: grayscale(40%);
-//   }
- 
-//   .main-txt h1 {
-//     text-align: center;
-//     margin-top: 0;
-//     font-weight: 600;
-//     text-shadow: 0px 1px 1px black;
-//     color: #1a2c50;
-//     padding-top: 25px;
-//     font-family: 'Noto serif', serif;
-//   }
- 
-//   .main-txt span {
-//     color: #1a2c50;
-//     font-weight: 600;
-//     font-family: 'Noto serif', serif;
-//   }
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@400;500;600&display=swap");
 
-//   .col-md-4 {
-//     flex: 0 0 33.33%; /* Each column takes up one-third of the container width */
-//     max-width: 33.33%; /* Set a maximum width for each column */
-//     padding: 0 15px; /* Add some padding between columns */
-//     box-sizing: border-box; /* Include padding and border in the width */
-//   }
-   
-   
-//   /* Your existing CSS */
-   
-//   /* Add this CSS for the flipped state */
-//   // .flip-card.flipped .flip-card-inner {
-//   //   transform: rotateY(180deg);
-//   // }
-   
-//   .gallery-container {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     height: 100vh; /* Set the height of the container to full viewport height */
-//   }
- 
-//   @keyframes planeLeftToRight {
-//     0% {
-//       left: -150px; /* Initial position off the left side of the screen */
-//     }
-//     100% {
-//       left: calc(100vw + 150px); /* Final position off the right side of the screen */
-//     }
-//   }
- 
-//   .plane-container {
-//     position: fixed;
-//     top: 50%; /* Adjust the position as needed */
-//     left: -150px; /* Start from the left side of the screen */
-//     animation: planeLeftToRight 10s linear infinite; /* Animation for plane movement */
-//     z-index: 9999; /* Ensure it's above other elements */
-//   }
- 
-//   .plane-icon {
-//     font-size: 28px; /* Increased size */
-//     color: #005665; /* Adjust color as needed */
-//   }
- 
-//   // .flip-card {
-//   //   background-color: transparent;
-//   //   width: 190px;
-//   //   height: 254px;
-//   //   perspective: 1000px;
-//   //   font-family: sans-serif;
-//   // }
- 
-//   .flip-card {
-//     background-color: transparent;
-//     width: 190px;
-//     height: 254px;
-//     perspective: 1000px;
-//     font-family: sans-serif;
-//     border-radius: 10px; /* Add rounded borders */
-//     padding: 7px;
-//   }
-//   .title {
-//     font-size: 1.5em;
-//     font-weight: 900;
-//     text-align: center;
-//     margin: 0;
-//   }
- 
-//   // .flip-card-inner {
-//   //   position: relative;
-//   //   width: 100%;
-//   //   height: 100%;
-//   //   text-align: center;
-//   //   transition: transform 0.8s;
-//   //   transform-style: preserve-3d;
-//   // }
- 
-//   .flip-card-inner {
-//     position: relative;
-//     width: 100%;
-//     height: 100%;
-//     text-align: center;
-//     transition: transform 0.8s;
-//     transform-style: preserve-3d;
-//     border-radius: 10px; /* Add rounded borders */
-//   }
-//   .flip-card:hover .flip-card-inner {
-//     transform: rotateY(180deg);
-//   }
- 
-//   // .flip-card-front, .flip-card-back {
-//   //   box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
-//   //   position: absolute;
-//   //   display: flex;
-//   //   flex-direction: column;
-//   //   justify-content: center;
-//   //   width: 100%;
-//   //   height: 100%;
-//   //   -webkit-backface-visibility: hidden;
-//   //   backface-visibility: hidden;
-//   //   border: 1.5px solid #2f8594;
-//   //  // border-radius: 1rem;
-//   // }
- 
-//   .flip-card-front, .flip-card-back {
-//     box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
-//     position: absolute;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     width: 100%;
-//     height: 100%;
-//     -webkit-backface-visibility: hidden;
-//     backface-visibility: hidden;
-//     border-radius: 10px; /* Add rounded borders */
-//     font-family: 'Noto serif', serif;
-//     font-size: small;
-//     // padding:1px;
-//   }
- 
-//   .flip-card-front {
-//     background: linear-gradient(120deg, #2f8594 60%, rgb(255, 231, 222) 88%,
-//     #2f8594 40%, #0b3840 48%);
-//     color: #2f8594;
-//   }
- 
-//   .flip-card-back {
-//     background: linear-gradient(120deg, #82e6f7 30%, #2f8594 88%,
-//     #b1effa 0%, #9feffd 78%);
-//     color: black;
-//     transform: rotateY(180deg);
-//   }
- 
- 
-//   /* Style for the row */
-// .row {
-//   display: flex; /* Use flexbox to arrange cards horizontally */
-//   flex-wrap: wrap; /* Allow cards to wrap to the next line */
-//   margin-top: 30px; /* Add margin at the top */
-// }
- 
-// /* Style for the columns */
 
- 
-// /* Your existing CSS */
-// /* Add this CSS for the flipped state */
-// .flip-card.flipped .flip-card-inner {
-//   transform: rotateY(180deg);
-// }
- 
- 
- 
-// .flip-card img {
-//   width: 100%; /* Ensure the image takes up the entire space of the card */
-//   height: 100%; /* Ensure the image takes up the entire space of the card */
-//   object-fit: cover; /* Make the image exactly fit into the card */
-//   border-radius: 10px; /* Add rounded borders */
-// }
+*{
+  font-family: 'Noto-serif', serif;
+}
 
 
 
  
-@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Jersey+10&family=Russo+One&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Jersey+10&family=Russo+One&display=swap');
  
  
 .overlay {
@@ -250,7 +30,7 @@
   }
  
   .text {
-    font-family: 'Fugaz One', sans-serif;
+    font-family: 'Noto-serif', serif;
     font-style: normal;
     font-weight: 400;
     color: white; /* Light black/ash color */
@@ -283,12 +63,14 @@
   .main-txt h1 {
     text-align: center;
     margin-top: 30px;
-    font-weight: 600;
-    text-shadow: 0px 1px 1px black;
+    font-weight: 900;
+    font-size: xx-large;
+    color: #333;
+    // text-shadow: 0px 1px 1px black;
   }
  
   .main-txt span {
-    color: #005665;
+    // color: #005665;
   }
  
   @keyframes planeLeftToRight {
@@ -300,22 +82,12 @@
     }
   }
  
- 
- 
-  // .flip-card {
-  //   background-color: transparent;
-  //   width: 190px;
-  //   height: 254px;
-  //   perspective: 1000px;
-  //   font-family: sans-serif;
-  // }
- 
   .flip-card {
     background-color: transparent;
     width: 190px;
     height: 254px;
     perspective: 1000px;
-    font-family: sans-serif;
+    font-family: 'Noto-serif', serif;
     border-radius: 10px; /* Add rounded borders */
     padding: 7px;
   }
@@ -325,15 +97,6 @@
     text-align: center;
     margin: 0;
   }
- 
-  // .flip-card-inner {
-  //   position: relative;
-  //   width: 100%;
-  //   height: 100%;
-  //   text-align: center;
-  //   transition: transform 0.8s;
-  //   transform-style: preserve-3d;
-  // }
  
   .flip-card-inner {
     position: relative;
@@ -348,19 +111,6 @@
     transform: rotateY(180deg);
   }
  
-  // .flip-card-front, .flip-card-back {
-  //   box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
-  //   position: absolute;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   width: 100%;
-  //   height: 100%;
-  //   -webkit-backface-visibility: hidden;
-  //   backface-visibility: hidden;
-  //   border: 1.5px solid #2f8594;
-  //  // border-radius: 1rem;
-  // }
  
   .flip-card-front, .flip-card-back {
     box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
@@ -376,15 +126,15 @@
   }
  
   .flip-card-front {
-    background: linear-gradient(120deg, #2f8594 60%, rgb(255, 231, 222) 88%,
-    #2f8594 40%, #0b3840 48%);
-    color: #2f8594;
+    background: linear-gradient(120deg, #CC6845 60%, rgb(255, 231, 222) 88%,
+    #CC6845 40%, #33262F 48%);
+    color: #CC6845;
   }
  
   .flip-card-back {
-    background: linear-gradient(120deg, #82e6f7 30%, #2f8594 88%,
-    #b1effa 0%, #9feffd 78%);
-    color: black;
+    background: linear-gradient(120deg, #33262F 30%, #CC6845 88%,
+    #CC6845 0%, #33262F 50%);
+    color: rgb(255, 239, 231);
     transform: rotateY(180deg);
   }
  
@@ -403,14 +153,7 @@
   padding: 0 15px; /* Add some padding between columns */
   box-sizing: border-box; /* Include padding and border in the width */
 }
- 
- 
-/* Your existing CSS */
- 
-/* Add this CSS for the flipped state */
-// .flip-card.flipped .flip-card-inner {
-//   transform: rotateY(180deg);
-// }
+
  
 .gallery-container {
   display: flex;

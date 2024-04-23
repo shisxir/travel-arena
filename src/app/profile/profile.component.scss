@@ -1,9 +1,11 @@
-/* profile.component.css */
+
+
 .profile-container {
     max-width: 400px;
-    margin: auto;
+    margin: 100px 420px;
     padding: 20px;
     border: 1px solid #ddd;
+    background-color:rgba(126, 101, 94, 0.189);
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
@@ -13,7 +15,8 @@
   }
   
   .form-group {
-    margin-bottom: 15px;
+    margin-top: 0px;
+    margin-bottom:15px;
   }
   
   input {
@@ -25,14 +28,15 @@
   
   button {
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    color:#e9c77e !important;
+    background-color: #6f5750 !important;
     border: none;
-    border-radius: 5px;
+    border-radius: 100px;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #45a049;
+    color:#F0AC19;
+    background-color: #4D3B36;
   }
   

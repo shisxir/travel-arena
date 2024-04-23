@@ -84,7 +84,8 @@
     z-index: 1000; /* Ensures it appears above other content */
     display: flex;
     flex-direction: column; /* Align items vertically */
-    background: white;
+    color: #fff;
+    background: #467c86;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Add shadow for separation */
     padding: 10px;
   }
@@ -93,11 +94,12 @@
     background: none;
     border: none;
     cursor: pointer;
+    color: #ffff;
     padding: 10px;
     text-align: left; /* Align text to the left */
   }
   
   .dropdown-content button:hover {
-    background: lightgray; /* Add hover effect */
+    background: rgba(211, 211, 211, 0.459); /* Add hover effect */
   }
   

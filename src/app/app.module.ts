@@ -35,6 +35,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FooterBetterComponent } from './footer-better/footer-better.component';
 // import { MatDialog } from '@angular/material/dialog';
 // import Razorpay from '../../node_modules/razorpay';
 
@@ -67,6 +68,7 @@ import { ProfileComponent } from './profile/profile.component';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
+    FooterBetterComponent,
   ],
   imports: [
     BrowserModule,

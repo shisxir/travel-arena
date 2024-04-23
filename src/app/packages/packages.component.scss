@@ -1,17 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@400;500;600&display=swap");
 
-.packages{
-    background-color: #f4f7fe;
-    // padding-bottom: 20px;
+*{
+    font-family: 'Noto-serif', serif !important;
 }
+
 .main-txt h1 {
     text-align: center;
     margin-top: 0;
-    font-weight: 600;
-    text-shadow: 0px 1px 1px black;
+    font-weight: 900;
+    font-size: xx-large;
     font-family: 'Noto serif', serif;
-    color: #1a2c50;
-    padding-top: 25px;
+    padding: 50px 0 20px 0;
 }
  
 .main-txt span {
@@ -87,7 +86,7 @@
     width: 100%;
     margin-top: 25px;
     text-align: center;
-    background: #e9f1fa;
+    background: #4D3B36;
 }
  
 #footer h1 {
@@ -95,11 +94,11 @@
     padding-top: 0;
     text-shadow: 0px 0px 1px black;
     font-family: 'Noto serif', serif;
-    color: #1a2c50;
+    color: rgb(255, 239, 231);
 }
  
 #footer h1 span {
-    color: #1a2c50;
+    color: rgb(255, 239, 231);
     font-family: 'Noto serif', serif;
 }
  
@@ -107,8 +106,8 @@
     padding: 10px;
     border-radius: 5px;
     font-size: 10px;
-    background: black;
-    color: white;
+    background: 4D3B36;
+    color: rgb(255, 239, 231);
     margin-left: 10px;
     margin-bottom: 10px;
     transition: 0.5s ease;
@@ -117,11 +116,18 @@
 }
  
 .social-links a:hover {
-    background: #005665;
+    background: #F0AC19;
+}
+
+#footer p{
+    color: rgb(255, 239, 231);
+    // font-size: medium !important;
 }
  
 .credit {
     margin-top: 15px;
+    // font-size: smaller !important;
+    color: rgb(255, 239, 231);
 }
  
 // .packages .card .card-body h6 {
