@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-navbar',
@@ -14,7 +15,9 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.isNavbarCollapsed = false;;
   }
-  constructor(private authService: AuthService,private router: Router) { }
+  constructor(private authService: AuthService,private router: Router,
+    private snackbar:MatSnackBar
+  ) { }
   @HostListener('document:click', ['$event'])
   clickout(event: Event) {
     if (!(event.target as HTMLElement).closest('.navbar-collapse')) {
@@ -47,7 +50,11 @@ export class NavbarComponent implements OnInit {
   }
   logout(): void {
     this.authService.logout();
-    alert('Successfully Logged Out');
+    this.snackbar.open('Logout successful', 'Close', {
+      duration: 3000,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+    });
     this.router.navigate(['/']);
     this.dropdownOpen = false; // Close the dropdown
   }

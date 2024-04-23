@@ -94,7 +94,8 @@
                         <div class="col-md-2 mt-2" style="font-family: noto serif, serif; font-weight: 200;">
                             <button id="searchButton" class="btn btn-primary btn-block" type="submit"
                                 style="height: 47px; margin-top: -2px; position:relative;"
-                                [disabled]="!searchForm.get('destination')?.value">Search</button>
+                                [disabled]="!searchForm.get('destination')?.value || !searchForm.get('duration')?.value
+                                || !searchForm.get('departure')?.value || !searchForm.get('guests')?.value">Search</button>
                         </div>
                     </div>
                 </div>

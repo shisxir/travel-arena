@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-profile',
@@ -13,7 +14,9 @@ export class ProfileComponent {
   dob: string = '';
   newPassword: string = '';
 
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private authService: AuthService, private router: Router,
+    private snackbar:MatSnackBar
+  ) {
     const user = this.authService.getLoggedInUser();
     if (user) {
       this.fullName = user.fullName;
@@ -31,7 +34,11 @@ export class ProfileComponent {
     if (userIndex >= 0) {
       users[userIndex].password = this.newPassword; // Change the password
       localStorage.setItem('registeredUsers', JSON.stringify(users));
-      alert('Password successfully changed.');
+      this.snackbar.open('Password Changed Succesfully', 'Close', {
+        duration: 3000,
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
       this.newPassword = '';// Clear the input
     }
   }

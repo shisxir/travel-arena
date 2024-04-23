@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +15,7 @@ export class RegisterComponent {
   password: string = '';
   formValid: boolean = false;
 
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(private router: Router, private authService: AuthService, private snackbar:MatSnackBar) {}
 
   checkForm(): void {
     // Check if all fields are filled
@@ -36,7 +37,11 @@ export class RegisterComponent {
     localStorage.setItem('registeredUsers', JSON.stringify(existingUsers));
 
     // Redirect to login page after registration
-    alert('Registration Successful!');
+    this.snackbar.open('Registration Successful', 'Close', {
+      duration: 3000,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+    });
     this.router.navigate(['/login']);
   }
 }
